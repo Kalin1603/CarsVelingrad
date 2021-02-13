@@ -24,9 +24,11 @@
 
         public virtual DbSet<Engine> Engines { get; set; }
 
-        public virtual DbSet<Extras> Extras { get; set; }
+        public virtual DbSet<EngineType> EngineTypes { get; set; }
 
-        public virtual DbSet<Location> Locations { get; set; }
+        public virtual DbSet<City> Cities { get; set; }
+
+        public virtual DbSet<Country> Countries { get; set; }
 
         public virtual DbSet<Model> Models { get; set; }
 

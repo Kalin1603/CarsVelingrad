@@ -8,11 +8,7 @@
 
     public class Vehicle
     {
-        public Vehicle()
-        {
-            this.Locations = new HashSet<Location>();
-        }
-
+        
         [Key]
         public int Id { get; set; }
 
@@ -28,18 +24,36 @@
         [ForeignKey(nameof(Model))]
         public int ModelId { get; set; }
 
-        public virtual Model District { get; set; }
+        public virtual Model Model { get; set; }
                
         [ForeignKey(nameof(Brand))]
         public int BrandId { get; set; }
 
-        public virtual Brand PropertyType { get; set; }
+        public virtual Brand Brand { get; set; }
+
+        [ForeignKey(nameof(City))]
+        public int CityId { get; set; }
+
+        public virtual City City { get; set; }
+
+        [ForeignKey(nameof(Country))]
+        public int CountryId { get; set; }
+
+        public virtual Country Country { get; set; }
 
         [ForeignKey(nameof(VehicleType))]
         public int VehicleTypeId { get; set; }
 
-        public virtual VehicleType BuildingType { get; set; }
-            
-        public virtual ICollection<Location> Locations { get; set; }
+        public virtual VehicleType VehicleType { get; set; }
+
+        [ForeignKey(nameof(Engine))]
+        public int EngineId { get; set; }
+
+        public virtual Engine Engine { get; set; }
+
+        [ForeignKey(nameof(EngineType))]
+        public int EngineTypeId { get; set; }
+
+        public virtual EngineType EngineType { get; set; }
     }
 }

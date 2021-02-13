@@ -3,12 +3,11 @@
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
     using System.Text;
 
-    public class Engine
+    public class EngineType
     {
-        public Engine()
+        public EngineType()
         {
             this.Vehicles = new HashSet<Vehicle>();
         }
@@ -17,16 +16,8 @@
         public int Id { get; set; }
 
         [Required]
-        public double Volume { get; set; }
-
-        [Required]
-        public int horsePower { get; set; }
-
-        [ForeignKey(nameof(EngineType))]
-        public int EngineTypeId { get; set; }
-
-        public virtual EngineType EngineType { get; set; }
-
+        public double Type { get; set; }
+               
         public virtual ICollection<Vehicle> Vehicles { get; set; }
 
     }

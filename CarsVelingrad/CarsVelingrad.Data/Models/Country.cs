@@ -6,9 +6,10 @@
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Text;
 
-    public class Engine
+
+    public class Country
     {
-        public Engine()
+        public Country()
         {
             this.Vehicles = new HashSet<Vehicle>();
         }
@@ -17,17 +18,13 @@
         public int Id { get; set; }
 
         [Required]
-        public double Volume { get; set; }
+        public string Name { get; set; }
 
-        [Required]
-        public int horsePower { get; set; }
+        [ForeignKey(nameof(City))]
+        public int CityId { get; set; }
 
-        [ForeignKey(nameof(EngineType))]
-        public int EngineTypeId { get; set; }
-
-        public virtual EngineType EngineType { get; set; }
+        public virtual City City { get; set; }
 
         public virtual ICollection<Vehicle> Vehicles { get; set; }
-
     }
 }
