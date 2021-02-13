@@ -5,11 +5,11 @@
     using System.ComponentModel.DataAnnotations;
     using System.Text;
 
-    public class Color
+    public class Tag
     {
-        public Color()
+        public Tag()
         {
-            this.Vehicles = new HashSet<Vehicle>();
+            this.Tags = new HashSet<TagCars>();
         }
 
         [Key]
@@ -18,9 +18,8 @@
         [Required]
         public string Name { get; set; }
 
-        [Required]
-        public int ColorCode { get; set; }
+        public string Discription { get; set; }
 
-        public virtual ICollection<Vehicle> Vehicles { get; set; }
+        public virtual ICollection<TagCars> Tags { get; set; }
     }
 }

@@ -3,11 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.Text;
-
     using System.ComponentModel.DataAnnotations;
-
-
-
 
     public class Location
     {
@@ -22,6 +18,6 @@
         [Key]
         public string CountryId { get; set; }
 
-        public ICollection<Location> Locations { get; set; }
+        public virtual ICollection<Location> Locations { get; set; }
     }
 }

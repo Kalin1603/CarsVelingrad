@@ -21,7 +21,7 @@
         [Required]
         public string Description { get; set; }
 
-        public ICollection<Vehicle> Vehicles { get; set; }
+        public virtual ICollection<Vehicle> Vehicles { get; set; }
        
     }
 }
