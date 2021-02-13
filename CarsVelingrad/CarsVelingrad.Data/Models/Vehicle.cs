@@ -55,5 +55,15 @@
         public int EngineTypeId { get; set; }
 
         public virtual EngineType EngineType { get; set; }
+
+        [ForeignKey(nameof(Tag))]
+        public int TagId { get; set; }
+
+        public virtual Tag Tag { get; set; }
+
+        [ForeignKey(nameof(TagCars))]
+        public int TagCarsId { get; set; }
+
+        public virtual TagCars TagCars { get; set; }
     }
 }
