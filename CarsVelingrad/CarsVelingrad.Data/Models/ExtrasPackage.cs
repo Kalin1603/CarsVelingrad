@@ -17,6 +17,21 @@
 
         public bool HasStabilityControl { get; set; }
 
+        public bool HasABS { get; set; }
+
+        public bool HasClimatronic { get; set; }
+
+        public bool HasCruiseControl { get; set; }
+
+        public bool HasParkAssist { get; set; }
+
+        public bool HasRadioBluetooth { get; set; }
+
+        public bool HasCentralLock { get; set; }
+
+        public bool HasElectricWindows { get; set; }
+
+
         [ForeignKey(nameof(Vehicle))]
         public int VehicleId { get; set; }
 

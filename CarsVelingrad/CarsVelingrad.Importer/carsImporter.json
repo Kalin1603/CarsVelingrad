@@ -10,7 +10,14 @@
     "Country": "България",
     "Color": "Червен",
     "HasStabilityControl": true,
-    "HasDVD": false
+    "HasDVD": false,
+    "HasABS": false,
+    "HasClimatronic": true,
+    "HasCruiseControl": true,
+    "HasParkAssist": false,
+    "HasRadioBluetooth": true,
+    "HasCentralLock": false,
+    "HasElectricWindows": true
   },
   {
     "Brand": "BMW",
@@ -23,7 +30,14 @@
     "Country": "България",
     "Color": "Червен",
     "HasStabilityControl": true,
-    "HasDVD": false
+    "HasDVD": false,
+    "HasABS": true,
+    "HasClimatronic": true,
+    "HasCruiseControl": false,
+    "HasParkAssist": false,
+    "HasRadioBluetooth": true,
+    "HasCentralLock": true,
+    "HasElectricWindows": true
   }
 
 ]
