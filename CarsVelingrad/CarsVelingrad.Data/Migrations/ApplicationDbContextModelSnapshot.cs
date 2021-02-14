@@ -107,11 +107,11 @@ namespace CarsVelingrad.Data.Migrations
                     b.Property<int>("EngineTypeId")
                         .HasColumnType("int");
 
+                    b.Property<int>("HorsePower")
+                        .HasColumnType("int");
+
                     b.Property<double>("Volume")
                         .HasColumnType("float");
-
-                    b.Property<int>("horsePower")
-                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -143,10 +143,31 @@ namespace CarsVelingrad.Data.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
+                    b.Property<bool>("HasABS")
+                        .HasColumnType("bit");
+
                     b.Property<bool>("HasAllWheelDriveSystem")
                         .HasColumnType("bit");
 
+                    b.Property<bool>("HasCentralLock")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("HasClimatronic")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("HasCruiseControl")
+                        .HasColumnType("bit");
+
                     b.Property<bool>("HasDVD")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("HasElectricWindows")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("HasParkAssist")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("HasRadioBluetooth")
                         .HasColumnType("bit");
 
                     b.Property<bool>("HasStabilityControl")
@@ -246,8 +267,8 @@ namespace CarsVelingrad.Data.Migrations
                     b.Property<int>("ModelId")
                         .HasColumnType("int");
 
-                    b.Property<int>("Price")
-                        .HasColumnType("int");
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<int?>("Run")
                         .HasColumnType("int");

@@ -13,4 +13,10 @@
     <ProjectReference Include="..\CarsVelingrad.Services\CarsVelingrad.Services.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="carsImporter.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

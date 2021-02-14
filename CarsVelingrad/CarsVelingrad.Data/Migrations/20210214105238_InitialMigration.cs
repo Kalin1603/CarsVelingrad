@@ -138,7 +138,7 @@ namespace CarsVelingrad.Data.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Volume = table.Column<double>(type: "float", nullable: false),
-                    horsePower = table.Column<int>(type: "int", nullable: false),
+                    HorsePower = table.Column<int>(type: "int", nullable: false),
                     EngineTypeId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -158,7 +158,7 @@ namespace CarsVelingrad.Data.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Price = table.Column<int>(type: "int", nullable: false),
+                    Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     AdvertDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Run = table.Column<int>(type: "int", nullable: true),
                     ModelId = table.Column<int>(type: "int", nullable: false),
@@ -212,6 +212,13 @@ namespace CarsVelingrad.Data.Migrations
                     HasDVD = table.Column<bool>(type: "bit", nullable: false),
                     HasAllWheelDriveSystem = table.Column<bool>(type: "bit", nullable: false),
                     HasStabilityControl = table.Column<bool>(type: "bit", nullable: false),
+                    HasABS = table.Column<bool>(type: "bit", nullable: false),
+                    HasClimatronic = table.Column<bool>(type: "bit", nullable: false),
+                    HasCruiseControl = table.Column<bool>(type: "bit", nullable: false),
+                    HasParkAssist = table.Column<bool>(type: "bit", nullable: false),
+                    HasRadioBluetooth = table.Column<bool>(type: "bit", nullable: false),
+                    HasCentralLock = table.Column<bool>(type: "bit", nullable: false),
+                    HasElectricWindows = table.Column<bool>(type: "bit", nullable: false),
                     VehicleId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>

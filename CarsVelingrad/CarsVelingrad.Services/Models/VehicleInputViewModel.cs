@@ -1,10 +1,10 @@
-﻿namespace CarsVelingrad.Importer
+﻿namespace CarsVelingrad.Services.Models
 {
     using System;
     using System.Collections.Generic;
     using System.Text;
 
-  public  class JsonVehicle
+    public class VehicleInputViewModel
     {
         public string Brand { get; set; }
 

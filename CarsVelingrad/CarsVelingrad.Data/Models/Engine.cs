@@ -20,7 +20,7 @@
         public double Volume { get; set; }
 
         [Required]
-        public int horsePower { get; set; }
+        public int HorsePower { get; set; }
 
         [ForeignKey(nameof(EngineType))]
         public int EngineTypeId { get; set; }

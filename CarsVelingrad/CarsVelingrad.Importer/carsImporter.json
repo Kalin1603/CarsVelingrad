@@ -2,6 +2,7 @@
   {
     "Brand": "Audi",
     "Model": "A6",
+    "VehicleType": "Седан",
     "EngineType": "Бензинов",
     "HorsePower": 150,
     "EngineVolume": 2500,
@@ -22,6 +23,7 @@
   {
     "Brand": "BMW",
     "Model": "X3",
+    "VehicleType": "Джип",
     "EngineType": "Бензинов",
     "HorsePower": 231,
     "EngineVolume": 3000,
