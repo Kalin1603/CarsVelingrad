@@ -9,7 +9,7 @@
     {
         public Brand()
         {
-            this.Vehicles = new HashSet<Vehicle>();
+            this.Models = new HashSet<Model>();
         }
 
         [Key]
@@ -18,10 +18,9 @@
         [Required]
         public string Name { get; set; }
 
-        [Required]
         public string Description { get; set; }
 
-        public virtual ICollection<Vehicle> Vehicles { get; set; }
+        public virtual ICollection<Model> Models { get; set; }
        
     }
 }

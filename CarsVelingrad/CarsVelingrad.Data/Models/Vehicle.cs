@@ -8,38 +8,38 @@
 
     public class Vehicle
     {
+
+        public Vehicle()
+        {
+            this.Tags = new HashSet<TagCars>();
+            this.AdvertDate = DateTime.UtcNow;
+        }
         
         [Key]
         public int Id { get; set; }
 
-        [Required]
         public int Price { get; set; }
 
-        [Required]
-        public int? AdvertDate { get; set; }
+        public DateTime AdvertDate { get; set; }
 
-        [Required]
         public int? Run { get; set; }
+
 
         [ForeignKey(nameof(Model))]
         public int ModelId { get; set; }
 
         public virtual Model Model { get; set; }
-               
-        [ForeignKey(nameof(Brand))]
-        public int BrandId { get; set; }
-
-        public virtual Brand Brand { get; set; }
+         
 
         [ForeignKey(nameof(City))]
         public int CityId { get; set; }
 
         public virtual City City { get; set; }
 
-        [ForeignKey(nameof(Country))]
-        public int CountryId { get; set; }
+        [ForeignKey(nameof(Color))]
+        public int ColorId { get; set; }
 
-        public virtual Country Country { get; set; }
+        public virtual Color Color { get; set; }
 
         [ForeignKey(nameof(VehicleType))]
         public int VehicleTypeId { get; set; }
@@ -51,19 +51,12 @@
 
         public virtual Engine Engine { get; set; }
 
-        [ForeignKey(nameof(EngineType))]
-        public int EngineTypeId { get; set; }
+        public virtual ICollection<TagCars> Tags { get; set; }
 
-        public virtual EngineType EngineType { get; set; }
+        [ForeignKey(nameof(ExtrasPackage))]
+        public int ExtrasPackageId { get; set; }
 
-        [ForeignKey(nameof(Tag))]
-        public int TagId { get; set; }
-
-        public virtual Tag Tag { get; set; }
-
-        [ForeignKey(nameof(TagCars))]
-        public int TagCarsId { get; set; }
-
-        public virtual TagCars TagCars { get; set; }
+        public virtual ExtrasPackage ExtrasPackage { get; set; }
+      
     }
 }

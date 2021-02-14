@@ -9,16 +9,16 @@
     {
         public EngineType()
         {
-            this.Vehicles = new HashSet<Vehicle>();
+            this.Engines = new HashSet<Engine>();
         }
 
         [Key]
         public int Id { get; set; }
 
         [Required]
-        public double Type { get; set; }
+        public string Name { get; set; }
                
-        public virtual ICollection<Vehicle> Vehicles { get; set; }
+        public virtual ICollection<Engine> Engines { get; set; }
 
     }
 }

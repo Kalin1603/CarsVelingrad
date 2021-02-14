@@ -7,7 +7,7 @@
     using System.Text;
     public class ApplicationDbContext : DbContext
     {
-        protected ApplicationDbContext()
+        public ApplicationDbContext()
         {
 
         }
@@ -15,7 +15,7 @@
         public ApplicationDbContext( DbContextOptions options) 
             : base(options)
         {
-
+            
         }
 
         public virtual DbSet<Brand> Brands { get; set; }
@@ -33,6 +33,8 @@
         public virtual DbSet<Model> Models { get; set; }
 
         public virtual DbSet<Tag> Tags { get; set; }
+
+        public virtual DbSet<ExtrasPackage> Extras { get; set; }
 
         public virtual DbSet<TagCars> TagCars { get; set; }
 
@@ -54,6 +56,14 @@
             {
                 entity.HasKey(x => new { x.VehicleId, x.TagId });
             });
+
+            modelBuilder.Entity<ExtrasPackage>(
+                entity =>
+                {
+                    entity.HasOne(e => e.Vehicle)
+                    .WithOne(p => p.ExtrasPackage)
+                    .OnDelete(DeleteBehavior.Restrict);
+                });
         }
     }
 }

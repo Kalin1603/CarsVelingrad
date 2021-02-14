@@ -6,12 +6,11 @@
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Text;
 
-
     public class Country
     {
         public Country()
         {
-            this.Vehicles = new HashSet<Vehicle>();
+            this.Cities = new HashSet<City>();
         }
 
         [Key]
@@ -20,11 +19,6 @@
         [Required]
         public string Name { get; set; }
 
-        [ForeignKey(nameof(City))]
-        public int CityId { get; set; }
-
-        public virtual City City { get; set; }
-
-        public virtual ICollection<Vehicle> Vehicles { get; set; }
+        public virtual ICollection<City> Cities { get; set; }
     }
 }

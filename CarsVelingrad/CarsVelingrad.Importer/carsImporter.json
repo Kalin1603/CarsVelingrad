@@ -1,0 +1,29 @@
+[
+  {
+    "Brand": "Audi",
+    "Model": "A6",
+    "EngineType": "Бензинов",
+    "HorsePower": 150,
+    "EngineVolume": 2500,
+    "City": "Велинград",
+    "ZipCode": 4600,
+    "Country": "България",
+    "Color": "Червен",
+    "HasStabilityControl": true,
+    "HasDVD": false
+  },
+  {
+    "Brand": "BMW",
+    "Model": "X3",
+    "EngineType": "Бензинов",
+    "HorsePower": 231,
+    "EngineVolume": 3000,
+    "City": "Велинград",
+    "ZipCode": 4600,
+    "Country": "България",
+    "Color": "Червен",
+    "HasStabilityControl": true,
+    "HasDVD": false
+  }
+
+]

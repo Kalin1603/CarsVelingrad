@@ -18,7 +18,6 @@
         [Required]
         public string Name { get; set; }
 
-        [Required]
         public int ColorCode { get; set; }
 
         public virtual ICollection<Vehicle> Vehicles { get; set; }

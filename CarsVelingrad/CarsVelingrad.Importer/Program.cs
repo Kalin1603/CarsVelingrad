@@ -1,11 +1,16 @@
 ﻿namespace CarsVelingrad.Importer
 {
+    using CarsVelingrad.Data.Models;
     using System;
-   public class Program
+    using System.Collections.Generic;
+    using System.IO;
+    using System.Text.Json;
+
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main()
         {
-            Console.WriteLine("Hello World!");
+           
         }
     }
 }
