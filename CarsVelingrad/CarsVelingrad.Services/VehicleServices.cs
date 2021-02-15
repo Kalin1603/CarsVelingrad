@@ -123,11 +123,14 @@
                 return;
             }
 
-            if (true)
+            if (vehicle.Price >15000)
             {
-
+                vehicle.Tags.Add(
+                    new TagCars
+                    {
+                        Tag = this.GetOrCreateTag("ExpensiveVehicle")
+                    });
             }
-
 
             vehicle.Tags.Clear();
       
