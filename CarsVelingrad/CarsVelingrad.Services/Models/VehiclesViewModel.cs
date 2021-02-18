@@ -4,6 +4,6 @@ namespace CarsVelingrad.Services.Models
 {
    public class VehiclesViewModel :PagingViewModel
     {
-        public ICollection<VehicleViewModel> vehicles { get; set; }
+        public ICollection<VehicleViewModel> Vehicles { get; set; }
     }
 }

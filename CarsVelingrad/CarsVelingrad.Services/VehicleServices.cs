@@ -17,6 +17,32 @@
             this.db = db;
         }
 
+        public VehiclesViewModel GetVehicles(int pageNumber =1)
+        {
+            VehiclesViewModel model = new VehiclesViewModel();
+
+            model.ElementsCount = db.Vehicles.Count();
+            model.PageNumber = pageNumber;
+
+            model.Vehicles = db.Vehicles.Select(x => new VehicleViewModel()
+            {
+            VehicleTypeId =x.VehicleTypeId,
+            AdvertDate = x.AdvertDate,
+            City = x.City.Name,
+            Color = x.Color.Name,
+            Engine = x.EngineId,
+            ExtrasPackageId=x.ExtrasPackageId,
+            Model = x.Model.Name,
+            Price = x.Price,
+            Run = x.Run
+
+            }).Skip(model.ItemsPerPage * model.PageNumber - 1)
+            .Take(model.ItemsPerPage)
+            .ToList();
+
+            return model;
+        }
+
         private Tag GetOrCreateTag(string tagName)
         {
             Tag tag = this.db.Tags.FirstOrDefault(x => x.Name == tagName);
