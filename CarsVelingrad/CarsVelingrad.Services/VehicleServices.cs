@@ -17,7 +17,7 @@
             this.db = db;
         }
 
-        public VehiclesViewModel GetVehicles(int pageNumber =1)
+        public VehiclesViewModel GetVehicles(int pageNumber = 1)
         {
             VehiclesViewModel model = new VehiclesViewModel();
 
@@ -26,15 +26,15 @@
 
             model.Vehicles = db.Vehicles.Select(x => new VehicleViewModel()
             {
-            VehicleTypeId =x.VehicleTypeId,
-            AdvertDate = x.AdvertDate,
-            City = x.City.Name,
-            Color = x.Color.Name,
-            Engine = x.EngineId,
-            ExtrasPackageId=x.ExtrasPackageId,
-            Model = x.Model.Name,
-            Price = x.Price,
-            Run = x.Run
+                VehicleTypeId = x.VehicleTypeId,
+                AdvertDate = x.AdvertDate,
+                City = x.City.Name,
+                Color = x.Color.Name,
+                Engine = x.EngineId,
+                ExtrasPackageId = x.ExtrasPackageId,
+                Model = x.Model.Name,
+                Price = x.Price,
+                Run = x.Run
 
             }).Skip(model.ItemsPerPage * model.PageNumber - 1)
             .Take(model.ItemsPerPage)
@@ -56,7 +56,7 @@
 
         public void Create(VehicleInputViewModel inputModel)
         {
-            bool isInvalid = string.IsNullOrWhiteSpace(inputModel.Brand) || string.IsNullOrWhiteSpace(inputModel.Model) 
+            bool isInvalid = string.IsNullOrWhiteSpace(inputModel.Brand) || string.IsNullOrWhiteSpace(inputModel.Model)
                 || string.IsNullOrWhiteSpace(inputModel.City) || string.IsNullOrWhiteSpace(inputModel.Country);
 
             if (isInvalid)
@@ -68,21 +68,21 @@
 
             if (brand == null)
             {
-                brand = new Brand() { Name = inputModel.Brand};
+                brand = new Brand() { Name = inputModel.Brand };
             }
 
-            Model model = this.db.Models.FirstOrDefault(m=>m.Name == inputModel.Model && m.Brand.Name == inputModel.Brand);
+            Model model = this.db.Models.FirstOrDefault(m => m.Name == inputModel.Model && m.Brand.Name == inputModel.Brand);
 
             if (model == null)
             {
-                model = new Model() { Name = inputModel.Model,Brand = brand};
+                model = new Model() { Name = inputModel.Model, Brand = brand };
             }
 
             EngineType engineType = this.db.EngineTypes.FirstOrDefault(et => et.Name == inputModel.EngineType);
 
             if (engineType == null)
             {
-                engineType = new EngineType() { Name = inputModel.EngineType};
+                engineType = new EngineType() { Name = inputModel.EngineType };
             }
 
             Engine engine = this.db.Engines.FirstOrDefault(e => e.HorsePower == inputModel.HorsePower && e.Volume == inputModel.EngineVolume && e.EngineType.Name == inputModel.EngineType);
@@ -96,25 +96,25 @@
 
             if (country == null)
             {
-                country = new Country() { Name = inputModel.Country};
+                country = new Country() { Name = inputModel.Country };
             }
 
             City city = this.db.Cities.FirstOrDefault(c => c.Name == inputModel.City && c.Country.Name == inputModel.Country);
 
             if (city == null)
             {
-                city = new City() { Name = inputModel.City,Country = country,ZipCode = inputModel.Zipcode};
+                city = new City() { Name = inputModel.City, Country = country, ZipCode = inputModel.Zipcode };
             }
 
             Color color = this.db.Colors.FirstOrDefault(c => c.Name == inputModel.Color);
 
             if (color == null)
             {
-                color = new Color() { Name = inputModel.Color};
+                color = new Color() { Name = inputModel.Color };
             }
 
-            ExtrasPackage extrasPackage = new ExtrasPackage() 
-            { 
+            ExtrasPackage extrasPackage = new ExtrasPackage()
+            {
                 HasABS = inputModel.HasABS,
                 HasAllWheelDriveSystem = inputModel.HasAllWheelDriveSystem,
                 HasCentralLock = inputModel.HasCentralLock,
@@ -131,10 +131,10 @@
 
             if (vehicleType == null)
             {
-                vehicleType = new VehicleType() { Name = inputModel.VehicleType};
+                vehicleType = new VehicleType() { Name = inputModel.VehicleType };
             }
 
-            Vehicle vehicle = new Vehicle() { Price = inputModel.Price,Engine = engine, City = city,Model = model, Color = color, ExtrasPackage = extrasPackage, VehicleType = vehicleType };
+            Vehicle vehicle = new Vehicle() { Price = inputModel.Price, Engine = engine, City = city, Model = model, Color = color, ExtrasPackage = extrasPackage, VehicleType = vehicleType };
 
             this.db.Vehicles.Add(vehicle);
             this.db.SaveChanges();
@@ -149,17 +149,135 @@
                 return;
             }
 
-            if (vehicle.Price >15000)
+            vehicle.Tags.Clear();
+
+            if (vehicle.Price > 150000)
             {
                 vehicle.Tags.Add(
                     new TagCars
                     {
-                        Tag = this.GetOrCreateTag("ExpensiveVehicle")
+                        Tag = this.GetOrCreateTag("HighClassVehicle")
                     });
             }
 
-            vehicle.Tags.Clear();
-      
+            else if (vehicle.Price < 150000 && vehicle.Price >= 10000)
+            {
+                vehicle.Tags.Add(
+                    new TagCars
+                    {
+                        Tag = this.GetOrCreateTag("MiddleClassVehicle")
+                    });
+            }
+
+            else
+            {
+                vehicle.Tags.Add(
+                    new TagCars
+                    {
+                        Tag = this.GetOrCreateTag("LowClassVehicle")
+                    });
+            }
+
+            if (vehicle.Engine.HorsePower > 1700)
+            {
+                vehicle.Tags.Add(
+                    new TagCars
+                    {
+                        Tag = this.GetOrCreateTag("ExtremelyFast")
+                    });
+            }
+
+            else if (vehicle.Engine.HorsePower < 1700 && vehicle.Engine.HorsePower >= 1000)
+            {
+                vehicle.Tags.Add(
+                    new TagCars
+                    {
+                        Tag = this.GetOrCreateTag("Fast")
+                    });
+            }
+
+            else if (vehicle.Engine.HorsePower < 1000 && vehicle.Engine.HorsePower >= 500)
+            {
+                vehicle.Tags.Add(
+                    new TagCars
+                    {
+                        Tag = this.GetOrCreateTag("MediumFast")
+                    });
+            }
+
+            else
+            {
+                vehicle.Tags.Add(
+                    new TagCars
+                    {
+                        Tag = this.GetOrCreateTag("Slow")
+                    });
+            }
+
+            if (vehicle.Engine.Volume > 3000)
+            {
+                vehicle.Tags.Add(
+                    new TagCars
+                    {
+                        Tag = this.GetOrCreateTag("ExtremelyLoud")
+                    });
+            }
+
+            else if (vehicle.Engine.Volume < 3000 && vehicle.Engine.Volume >= 2000)
+            {
+                vehicle.Tags.Add(
+                    new TagCars
+                    {
+                        Tag = this.GetOrCreateTag("Loud")
+                    });
+            }
+
+            else if (vehicle.Engine.Volume < 2000 && vehicle.Engine.Volume >= 1000)
+            {
+                vehicle.Tags.Add(
+                    new TagCars
+                    {
+                        Tag = this.GetOrCreateTag("MediumLoud")
+                    });
+            }
+
+            else
+            {
+                vehicle.Tags.Add(
+                    new TagCars
+                    {
+                        Tag = this.GetOrCreateTag("Quiet")
+                    });
+            }
+
+            if (vehicle.Run > 50000)
+            {
+                vehicle.Tags.Add(
+                    new TagCars
+                    {
+                        Tag = this.GetOrCreateTag("HugeRun")
+                    });
+            }
+
+            else if (vehicle.Run < 50000 && vehicle.Run >= 20000)
+            {
+                vehicle.Tags.Add(
+                    new TagCars
+                    {
+                        Tag = this.GetOrCreateTag("MediumRun")
+                    });
+            }
+
+            else
+            {
+                vehicle.Tags.Add(
+                    new TagCars
+                    {
+                        Tag = this.GetOrCreateTag("SmallRun")
+                    });
+            }
+
             db.SaveChanges();
-    }   }
+        }
+    }
 }

@@ -61,7 +61,7 @@ namespace CarsVelingrad.ConsoleApp
                     case "2":
                         if (model.HasNextPage)
                         {
-                            model =vehicleServices.GetVehicles(model.NextPageNumber)
+                            model = vehicleServices.GetVehicles(model.NextPageNumber);
                         }
                         else
                         {
