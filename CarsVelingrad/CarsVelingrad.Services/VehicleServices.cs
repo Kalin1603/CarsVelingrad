@@ -2,7 +2,7 @@
 {
     using CarsVelingrad.Data;
     using CarsVelingrad.Data.Models;
-    using CarsVelingrad.Services.Models;
+    using CarsVelingrad.ViewModels;
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -27,7 +27,7 @@
             model.Vehicles = db.Vehicles.Select(x => new VehicleViewModel()
             {
                 VehicleTypeId = x.VehicleTypeId,
-                AdvertDate = x.AdvertDate,
+                AdvertDate = x.AdvertDate.ToString("MMMM dd, yyyy"),
                 City = x.City.Name,
                 Color = x.Color.Name,
                 Engine = x.EngineId,
@@ -134,7 +134,7 @@
                 vehicleType = new VehicleType() { Name = inputModel.VehicleType };
             }
 
-            Vehicle vehicle = new Vehicle() { Price = inputModel.Price, Engine = engine, City = city, Model = model, Color = color, ExtrasPackage = extrasPackage, VehicleType = vehicleType };
+            Vehicle vehicle = new Vehicle() { Price = inputModel.Price,Run = inputModel.Run, Engine = engine, City = city, Model = model, Color = color, ExtrasPackage = extrasPackage, VehicleType = vehicleType };
 
             this.db.Vehicles.Add(vehicle);
             this.db.SaveChanges();

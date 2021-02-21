@@ -3,7 +3,7 @@
     using CarsVelingrad.Data;
     using CarsVelingrad.Data.Models;
     using CarsVelingrad.Services;
-    using CarsVelingrad.Services.Models;
+    using CarsVelingrad.ViewModels;
     using System;
     using System.Collections.Generic;
     using System.IO;
@@ -33,6 +33,7 @@
                         EngineType = vehicle.EngineType,
                         EngineVolume = vehicle.EngineVolume,
                         Price = vehicle.Price,
+                        Run = vehicle.Run,
                         Zipcode = vehicle.Zipcode,
                         HorsePower = vehicle.HorsePower,
                         HasABS = vehicle.HasABS,

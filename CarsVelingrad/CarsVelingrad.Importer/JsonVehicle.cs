@@ -12,6 +12,8 @@
 
         public string VehicleType { get; set; }
 
+        public int Run { get; set; }
+
         public string EngineType { get; set; }
 
         public int HorsePower { get; set; }

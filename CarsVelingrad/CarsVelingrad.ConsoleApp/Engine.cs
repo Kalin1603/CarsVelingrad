@@ -1,5 +1,5 @@
 ﻿using CarsVelingrad.Services;
-using CarsVelingrad.Services.Models;
+using CarsVelingrad.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -35,13 +35,19 @@ namespace CarsVelingrad.ConsoleApp
             VehiclesViewModel model = vehicleServices.GetVehicles();
             while (true)
             {
+                PrintLine();
+                Console.WriteLine($"{"Модел",20} | {"Цена",10} лв. | {"Дата",20} | {"Пробег",10} | {"Местоположение"}");
+                PrintLine();
                 foreach (var vehicles in model.Vehicles)
                 {
-                    Console.WriteLine($"{vehicles.VehicleTypeId},{vehicles.AdvertDate},{vehicles.Price},{vehicles.Model},{vehicles.Run},{vehicles.Engine},{vehicles.ExtrasPackageId},{vehicles.Color},{vehicles.City} ");
+                    Console.WriteLine($"{vehicles.Model,20} | {vehicles.Price,10} лв. | {vehicles.AdvertDate,20} | {vehicles.Run,10} | {vehicles.City}");
                 }
-                Console.WriteLine($"Страница: {model.PageNumber} / {model.PagesCount}, Автомобили: {model.ElementsCount}");
 
+                PrintLine();
+                Console.WriteLine($"Страница: {model.PageNumber} / {model.PagesCount}, Автомобили: {model.ElementsCount}");
+                PrintLine();
                 Console.WriteLine(ListMenu());
+
                 string cmd = Console.ReadLine();
                 switch (cmd)
                 {
@@ -73,6 +79,11 @@ namespace CarsVelingrad.ConsoleApp
                         break;
                 }
             }
+        }
+
+        private static void PrintLine()
+        {
+            Console.WriteLine(new string('-', 95));
         }
 
         private string Menu()

@@ -9,7 +9,7 @@
 
         public decimal Price { get; set; }
 
-        public DateTime AdvertDate { get; set; }
+        public string AdvertDate { get; set; }
 
         public int? Run { get; set; }
 
