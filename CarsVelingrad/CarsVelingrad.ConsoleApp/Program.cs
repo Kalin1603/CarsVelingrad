@@ -11,7 +11,7 @@
         {
             Console.OutputEncoding = Encoding.UTF8;
             ApplicationDbContext applicationDbContext = new ApplicationDbContext();
-            VehicleServices vehicleServices = new VehicleServices(applicationDbContext);
+            VehicleService vehicleServices = new VehicleService(applicationDbContext);
             Engine engine = new Engine(vehicleServices);
             engine.Run();
         }

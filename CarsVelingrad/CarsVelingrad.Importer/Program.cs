@@ -16,7 +16,7 @@
             var json = File.ReadAllText("carsImporter.json");
             var vehicles = JsonSerializer.Deserialize<IEnumerable<JsonVehicle>>(json);
             var db = new ApplicationDbContext();
-            VehicleServices service = new VehicleServices(db);
+            VehicleService service = new VehicleService(db);
 
             foreach (var vehicle in vehicles)
             {

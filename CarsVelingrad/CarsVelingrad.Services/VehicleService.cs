@@ -8,11 +8,11 @@
     using System.Linq;
     using System.Text;
 
-    public class VehicleServices
+    public class VehicleService
     {
         private readonly ApplicationDbContext db;
 
-        public VehicleServices(ApplicationDbContext db)
+        public VehicleService(ApplicationDbContext db)
         {
             this.db = db;
         }

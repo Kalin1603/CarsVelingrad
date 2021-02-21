@@ -8,9 +8,9 @@ namespace CarsVelingrad.ConsoleApp
 {
     public class Engine
     {
-        private readonly VehicleServices vehicleServices;
+        private readonly VehicleService vehicleServices;
 
-        public Engine(VehicleServices vehicleServices)
+        public Engine(VehicleService vehicleServices)
         {
             this.vehicleServices = vehicleServices;
         }
@@ -36,11 +36,11 @@ namespace CarsVelingrad.ConsoleApp
             while (true)
             {
                 PrintLine();
-                Console.WriteLine($"{"Модел",20} | {"Цена",10} лв. | {"Дата",20} | {"Пробег",10} | {"Местоположение"}");
+                Console.WriteLine($"{"Марка",10} | {"Модел",20} | {"Цена",10} лв. | {"Дата",20} | {"Пробег",15} | {"Местоположение"}");
                 PrintLine();
                 foreach (var vehicles in model.Vehicles)
                 {
-                    Console.WriteLine($"{vehicles.Model,20} | {vehicles.Price,10} лв. | {vehicles.AdvertDate,20} | {vehicles.Run,10} | {vehicles.City}");
+                    Console.WriteLine($"{vehicles.Brand,10} | {vehicles.Model,20} | {vehicles.Price,10} лв. | {vehicles.AdvertDate,20} | {vehicles.Run,8} кв.км. | {vehicles.City}");
                 }
 
                 PrintLine();
