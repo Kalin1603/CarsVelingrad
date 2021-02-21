@@ -1,4 +1,4 @@
-﻿namespace CarsVelingrad.Services.Models
+﻿namespace CarsVelingrad.ViewModels
 {
     using System;
     using System.Collections.Generic;

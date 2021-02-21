@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarsVelingrad.ConsoleApp", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarsVelingrad.Services", "CarsVelingrad.Services\CarsVelingrad.Services.csproj", "{4D302E4F-7DEA-4DF2-A27B-A60AA9F403FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarsVelingrad.Importer", "CarsVelingrad.Importer\CarsVelingrad.Importer.csproj", "{A0F28FD7-2DF5-4BF9-A032-EEF7965034D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarsVelingrad.Importer", "CarsVelingrad.Importer\CarsVelingrad.Importer.csproj", "{A0F28FD7-2DF5-4BF9-A032-EEF7965034D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarsVelingrad.ViewModels", "CarsVelingrad.ViewModels\CarsVelingrad.ViewModels.csproj", "{FDCC2F15-441B-4B4B-9E8B-0446FDF70949}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{A0F28FD7-2DF5-4BF9-A032-EEF7965034D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0F28FD7-2DF5-4BF9-A032-EEF7965034D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0F28FD7-2DF5-4BF9-A032-EEF7965034D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDCC2F15-441B-4B4B-9E8B-0446FDF70949}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDCC2F15-441B-4B4B-9E8B-0446FDF70949}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDCC2F15-441B-4B4B-9E8B-0446FDF70949}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDCC2F15-441B-4B4B-9E8B-0446FDF70949}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
