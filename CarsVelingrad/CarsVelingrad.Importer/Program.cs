@@ -1,7 +1,6 @@
 ﻿namespace CarsVelingrad.Importer
 {
     using CarsVelingrad.Data;
-    using CarsVelingrad.Data.Models;
     using CarsVelingrad.Services;
     using CarsVelingrad.ViewModels;
     using System;
@@ -15,7 +14,7 @@
         {
             var json = File.ReadAllText("carsImporter.json");
             var vehicles = JsonSerializer.Deserialize<IEnumerable<JsonVehicle>>(json);
-            var db = new ApplicationDbContext();
+            ApplicationDbContext db = new ApplicationDbContext();
             VehicleService service = new VehicleService(db);
 
             foreach (var vehicle in vehicles)

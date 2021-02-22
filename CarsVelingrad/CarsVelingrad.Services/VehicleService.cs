@@ -34,7 +34,8 @@
                 ExtrasPackageId = x.ExtrasPackageId,
                 Model = x.Model.Name,
                 Price = x.Price,
-                Run = x.Run
+                Run = x.Run,
+                Brand = x.Model.Brand.Name
 
             }).Skip(model.ItemsPerPage * model.PageNumber - 1)
             .Take(model.ItemsPerPage)

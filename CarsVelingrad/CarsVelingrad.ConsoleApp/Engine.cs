@@ -83,7 +83,7 @@ namespace CarsVelingrad.ConsoleApp
 
         private static void PrintLine()
         {
-            Console.WriteLine(new string('-', 95));
+            Console.WriteLine(new string('-', 110));
         }
 
         private string Menu()
