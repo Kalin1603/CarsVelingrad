@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CarsVelingrad.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210222194047_InitialMigration")]
-    partial class InitialMigration
+    [Migration("20210223160940_InitialMigration2")]
+    partial class InitialMigration2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -47,7 +47,7 @@ namespace CarsVelingrad.Data.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<int>("CityId")
+                    b.Property<int>("CountryId")
                         .HasColumnType("int");
 
                     b.Property<string>("Name")
@@ -59,7 +59,7 @@ namespace CarsVelingrad.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CityId");
+                    b.HasIndex("CountryId");
 
                     b.ToTable("Cities");
                 });
@@ -316,7 +316,7 @@ namespace CarsVelingrad.Data.Migrations
                 {
                     b.HasOne("CarsVelingrad.Data.Models.Country", "Country")
                         .WithMany("Cities")
-                        .HasForeignKey("CityId")
+                        .HasForeignKey("CountryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

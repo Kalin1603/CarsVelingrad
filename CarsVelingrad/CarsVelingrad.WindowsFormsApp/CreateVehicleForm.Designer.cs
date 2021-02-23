@@ -30,29 +30,19 @@ namespace CarsVelingrad.WindowsFormsApp
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.labelBrand = new System.Windows.Forms.Label();
+            this.labelModel = new System.Windows.Forms.Label();
+            this.labelVehicleType = new System.Windows.Forms.Label();
+            this.labelEngineType = new System.Windows.Forms.Label();
+            this.labelHorsePower = new System.Windows.Forms.Label();
+            this.labelEngineVolume = new System.Windows.Forms.Label();
+            this.labelPrice = new System.Windows.Forms.Label();
+            this.labelRun = new System.Windows.Forms.Label();
+            this.labelCity = new System.Windows.Forms.Label();
+            this.labelZipcode = new System.Windows.Forms.Label();
+            this.labelCountry = new System.Windows.Forms.Label();
+            this.labelColor = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.radioButtonHasStabilityControl = new System.Windows.Forms.RadioButton();
-            this.radioButtonHasDVD = new System.Windows.Forms.RadioButton();
-            this.radioButtonHasAllWheelDriveSystem = new System.Windows.Forms.RadioButton();
-            this.radioButtonHasABS = new System.Windows.Forms.RadioButton();
-            this.radioButtonHasClimatronic = new System.Windows.Forms.RadioButton();
-            this.radioButtonHasCruiseControl = new System.Windows.Forms.RadioButton();
-            this.radioButtonHasParkAssist = new System.Windows.Forms.RadioButton();
-            this.radioButtonHasCentralLock = new System.Windows.Forms.RadioButton();
-            this.radioButtonHasElectricWindows = new System.Windows.Forms.RadioButton();
-            this.radioButtonHasRadioBluetooth = new System.Windows.Forms.RadioButton();
             this.Create = new System.Windows.Forms.Button();
             this.comboBoxBrand = new System.Windows.Forms.ComboBox();
             this.comboBoxModel = new System.Windows.Forms.ComboBox();
@@ -65,252 +55,152 @@ namespace CarsVelingrad.WindowsFormsApp
             this.textBoxRun = new System.Windows.Forms.TextBox();
             this.textBoxCity = new System.Windows.Forms.TextBox();
             this.textBoxCountry = new System.Windows.Forms.TextBox();
-            this.comboBoxZipCode = new System.Windows.Forms.ComboBox();
+            this.textBoxZipcode = new System.Windows.Forms.TextBox();
+            this.checkBoxHasStabilityControl = new System.Windows.Forms.CheckBox();
+            this.checkBoxHasDVD = new System.Windows.Forms.CheckBox();
+            this.checkBoxHasAllWheelDriveSystem = new System.Windows.Forms.CheckBox();
+            this.checkBoxHasABS = new System.Windows.Forms.CheckBox();
+            this.checkBoxHasClimatronic = new System.Windows.Forms.CheckBox();
+            this.checkBoxHasCruiseControl = new System.Windows.Forms.CheckBox();
+            this.checkBoxHasParkAssist = new System.Windows.Forms.CheckBox();
+            this.checkBoxHasRadioBluetooth = new System.Windows.Forms.CheckBox();
+            this.checkBoxHasCentralLock = new System.Windows.Forms.CheckBox();
+            this.checkBoxHasElectricWindows = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(224, 9);
+            this.label1.Location = new System.Drawing.Point(300, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(412, 47);
             this.label1.TabIndex = 0;
             this.label1.Text = "Добавяне на автомобил";
             // 
-            // label2
+            // labelBrand
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 69);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 30);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Марка";
+            this.labelBrand.AutoSize = true;
+            this.labelBrand.Location = new System.Drawing.Point(12, 69);
+            this.labelBrand.Name = "labelBrand";
+            this.labelBrand.Size = new System.Drawing.Size(76, 30);
+            this.labelBrand.TabIndex = 1;
+            this.labelBrand.Text = "Марка";
             // 
-            // label3
+            // labelModel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 113);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 30);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Модел";
+            this.labelModel.AutoSize = true;
+            this.labelModel.Location = new System.Drawing.Point(13, 113);
+            this.labelModel.Name = "labelModel";
+            this.labelModel.Size = new System.Drawing.Size(77, 30);
+            this.labelModel.TabIndex = 2;
+            this.labelModel.Text = "Модел";
             // 
-            // label4
+            // labelVehicleType
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 158);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(48, 30);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Тип";
+            this.labelVehicleType.AutoSize = true;
+            this.labelVehicleType.Location = new System.Drawing.Point(12, 159);
+            this.labelVehicleType.Name = "labelVehicleType";
+            this.labelVehicleType.Size = new System.Drawing.Size(48, 30);
+            this.labelVehicleType.TabIndex = 3;
+            this.labelVehicleType.Text = "Тип";
             // 
-            // label5
+            // labelEngineType
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 200);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(48, 30);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Вид";
+            this.labelEngineType.AutoSize = true;
+            this.labelEngineType.Location = new System.Drawing.Point(12, 203);
+            this.labelEngineType.Name = "labelEngineType";
+            this.labelEngineType.Size = new System.Drawing.Size(48, 30);
+            this.labelEngineType.TabIndex = 4;
+            this.labelEngineType.Text = "Вид";
             // 
-            // label6
+            // labelHorsePower
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 327);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(132, 30);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Конски сили";
+            this.labelHorsePower.AutoSize = true;
+            this.labelHorsePower.Location = new System.Drawing.Point(12, 350);
+            this.labelHorsePower.Name = "labelHorsePower";
+            this.labelHorsePower.Size = new System.Drawing.Size(132, 30);
+            this.labelHorsePower.TabIndex = 5;
+            this.labelHorsePower.Text = "Конски сили";
             // 
-            // label7
+            // labelEngineVolume
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 368);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(237, 30);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Големина на двигателя";
+            this.labelEngineVolume.AutoSize = true;
+            this.labelEngineVolume.Location = new System.Drawing.Point(12, 401);
+            this.labelEngineVolume.Name = "labelEngineVolume";
+            this.labelEngineVolume.Size = new System.Drawing.Size(237, 30);
+            this.labelEngineVolume.TabIndex = 6;
+            this.labelEngineVolume.Text = "Големина на двигателя";
             // 
-            // label8
+            // labelPrice
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(12, 282);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(63, 30);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "Цена";
+            this.labelPrice.AutoSize = true;
+            this.labelPrice.Location = new System.Drawing.Point(13, 304);
+            this.labelPrice.Name = "labelPrice";
+            this.labelPrice.Size = new System.Drawing.Size(63, 30);
+            this.labelPrice.TabIndex = 7;
+            this.labelPrice.Text = "Цена";
             // 
-            // label9
+            // labelRun
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(12, 410);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(83, 30);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "Пробег";
+            this.labelRun.AutoSize = true;
+            this.labelRun.Location = new System.Drawing.Point(13, 454);
+            this.labelRun.Name = "labelRun";
+            this.labelRun.Size = new System.Drawing.Size(83, 30);
+            this.labelRun.TabIndex = 8;
+            this.labelRun.Text = "Пробег";
             // 
-            // label10
+            // labelCity
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(13, 452);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(183, 30);
-            this.label10.TabIndex = 9;
-            this.label10.Text = "Местоположение";
+            this.labelCity.AutoSize = true;
+            this.labelCity.Location = new System.Drawing.Point(12, 500);
+            this.labelCity.Name = "labelCity";
+            this.labelCity.Size = new System.Drawing.Size(183, 30);
+            this.labelCity.TabIndex = 9;
+            this.labelCity.Text = "Местоположение";
             // 
-            // label11
+            // labelZipcode
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(12, 534);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(151, 30);
-            this.label11.TabIndex = 10;
-            this.label11.Text = "Пощенски код";
+            this.labelZipcode.AutoSize = true;
+            this.labelZipcode.Location = new System.Drawing.Point(12, 601);
+            this.labelZipcode.Name = "labelZipcode";
+            this.labelZipcode.Size = new System.Drawing.Size(151, 30);
+            this.labelZipcode.TabIndex = 10;
+            this.labelZipcode.Text = "Пощенски код";
             // 
-            // label12
+            // labelCountry
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(12, 491);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(101, 30);
-            this.label12.TabIndex = 11;
-            this.label12.Text = "Държава";
+            this.labelCountry.AutoSize = true;
+            this.labelCountry.Location = new System.Drawing.Point(12, 547);
+            this.labelCountry.Name = "labelCountry";
+            this.labelCountry.Size = new System.Drawing.Size(101, 30);
+            this.labelCountry.TabIndex = 11;
+            this.labelCountry.Text = "Държава";
             // 
-            // label13
+            // labelColor
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(13, 242);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(60, 30);
-            this.label13.TabIndex = 12;
-            this.label13.Text = "Цвят";
+            this.labelColor.AutoSize = true;
+            this.labelColor.Location = new System.Drawing.Point(12, 253);
+            this.labelColor.Name = "labelColor";
+            this.labelColor.Size = new System.Drawing.Size(60, 30);
+            this.labelColor.TabIndex = 12;
+            this.labelColor.Text = "Цвят";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label14.Location = new System.Drawing.Point(504, 69);
+            this.label14.Location = new System.Drawing.Point(618, 70);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(266, 37);
             this.label14.TabIndex = 13;
             this.label14.Text = "Добавяне на екстри";
             // 
-            // radioButtonHasStabilityControl
-            // 
-            this.radioButtonHasStabilityControl.AutoSize = true;
-            this.radioButtonHasStabilityControl.Location = new System.Drawing.Point(500, 113);
-            this.radioButtonHasStabilityControl.Name = "radioButtonHasStabilityControl";
-            this.radioButtonHasStabilityControl.Size = new System.Drawing.Size(267, 34);
-            this.radioButtonHasStabilityControl.TabIndex = 14;
-            this.radioButtonHasStabilityControl.TabStop = true;
-            this.radioButtonHasStabilityControl.Text = "Стабилизираща система";
-            this.radioButtonHasStabilityControl.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonHasDVD
-            // 
-            this.radioButtonHasDVD.AutoSize = true;
-            this.radioButtonHasDVD.Location = new System.Drawing.Point(500, 156);
-            this.radioButtonHasDVD.Name = "radioButtonHasDVD";
-            this.radioButtonHasDVD.Size = new System.Drawing.Size(200, 34);
-            this.radioButtonHasDVD.TabIndex = 15;
-            this.radioButtonHasDVD.TabStop = true;
-            this.radioButtonHasDVD.Text = "DVD - устройство";
-            this.radioButtonHasDVD.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonHasAllWheelDriveSystem
-            // 
-            this.radioButtonHasAllWheelDriveSystem.AutoSize = true;
-            this.radioButtonHasAllWheelDriveSystem.Location = new System.Drawing.Point(500, 196);
-            this.radioButtonHasAllWheelDriveSystem.Name = "radioButtonHasAllWheelDriveSystem";
-            this.radioButtonHasAllWheelDriveSystem.Size = new System.Drawing.Size(322, 34);
-            this.radioButtonHasAllWheelDriveSystem.TabIndex = 16;
-            this.radioButtonHasAllWheelDriveSystem.TabStop = true;
-            this.radioButtonHasAllWheelDriveSystem.Text = "Задвижване на всички колела";
-            this.radioButtonHasAllWheelDriveSystem.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonHasABS
-            // 
-            this.radioButtonHasABS.AutoSize = true;
-            this.radioButtonHasABS.Location = new System.Drawing.Point(500, 242);
-            this.radioButtonHasABS.Name = "radioButtonHasABS";
-            this.radioButtonHasABS.Size = new System.Drawing.Size(270, 34);
-            this.radioButtonHasABS.TabIndex = 17;
-            this.radioButtonHasABS.TabStop = true;
-            this.radioButtonHasABS.Text = "Антиблокираща система";
-            this.radioButtonHasABS.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonHasClimatronic
-            // 
-            this.radioButtonHasClimatronic.AutoSize = true;
-            this.radioButtonHasClimatronic.Location = new System.Drawing.Point(500, 282);
-            this.radioButtonHasClimatronic.Name = "radioButtonHasClimatronic";
-            this.radioButtonHasClimatronic.Size = new System.Drawing.Size(170, 34);
-            this.radioButtonHasClimatronic.TabIndex = 18;
-            this.radioButtonHasClimatronic.TabStop = true;
-            this.radioButtonHasClimatronic.Text = "Климатроника";
-            this.radioButtonHasClimatronic.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonHasCruiseControl
-            // 
-            this.radioButtonHasCruiseControl.AutoSize = true;
-            this.radioButtonHasCruiseControl.Location = new System.Drawing.Point(500, 322);
-            this.radioButtonHasCruiseControl.Name = "radioButtonHasCruiseControl";
-            this.radioButtonHasCruiseControl.Size = new System.Drawing.Size(133, 34);
-            this.radioButtonHasCruiseControl.TabIndex = 19;
-            this.radioButtonHasCruiseControl.TabStop = true;
-            this.radioButtonHasCruiseControl.Text = "Автопилот";
-            this.radioButtonHasCruiseControl.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonHasParkAssist
-            // 
-            this.radioButtonHasParkAssist.AutoSize = true;
-            this.radioButtonHasParkAssist.Location = new System.Drawing.Point(500, 362);
-            this.radioButtonHasParkAssist.Name = "radioButtonHasParkAssist";
-            this.radioButtonHasParkAssist.Size = new System.Drawing.Size(136, 34);
-            this.radioButtonHasParkAssist.TabIndex = 20;
-            this.radioButtonHasParkAssist.TabStop = true;
-            this.radioButtonHasParkAssist.Text = "Партроник";
-            this.radioButtonHasParkAssist.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonHasCentralLock
-            // 
-            this.radioButtonHasCentralLock.AutoSize = true;
-            this.radioButtonHasCentralLock.Location = new System.Drawing.Point(500, 442);
-            this.radioButtonHasCentralLock.Name = "radioButtonHasCentralLock";
-            this.radioButtonHasCentralLock.Size = new System.Drawing.Size(258, 34);
-            this.radioButtonHasCentralLock.TabIndex = 21;
-            this.radioButtonHasCentralLock.TabStop = true;
-            this.radioButtonHasCentralLock.Text = "Централно заключване";
-            this.radioButtonHasCentralLock.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonHasElectricWindows
-            // 
-            this.radioButtonHasElectricWindows.AutoSize = true;
-            this.radioButtonHasElectricWindows.Location = new System.Drawing.Point(500, 482);
-            this.radioButtonHasElectricWindows.Name = "radioButtonHasElectricWindows";
-            this.radioButtonHasElectricWindows.Size = new System.Drawing.Size(231, 34);
-            this.radioButtonHasElectricWindows.TabIndex = 22;
-            this.radioButtonHasElectricWindows.TabStop = true;
-            this.radioButtonHasElectricWindows.Text = "Електрически стъкла";
-            this.radioButtonHasElectricWindows.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonHasRadioBluetooth
-            // 
-            this.radioButtonHasRadioBluetooth.AutoSize = true;
-            this.radioButtonHasRadioBluetooth.Location = new System.Drawing.Point(500, 402);
-            this.radioButtonHasRadioBluetooth.Name = "radioButtonHasRadioBluetooth";
-            this.radioButtonHasRadioBluetooth.Size = new System.Drawing.Size(193, 34);
-            this.radioButtonHasRadioBluetooth.TabIndex = 23;
-            this.radioButtonHasRadioBluetooth.TabStop = true;
-            this.radioButtonHasRadioBluetooth.Text = "Безжичен блутут";
-            this.radioButtonHasRadioBluetooth.UseVisualStyleBackColor = true;
-            // 
             // Create
             // 
-            this.Create.Location = new System.Drawing.Point(545, 522);
+            this.Create.Location = new System.Drawing.Point(616, 547);
             this.Create.Name = "Create";
-            this.Create.Size = new System.Drawing.Size(176, 61);
+            this.Create.Size = new System.Drawing.Size(248, 102);
             this.Create.TabIndex = 24;
             this.Create.Text = "Добави";
             this.Create.UseVisualStyleBackColor = true;
@@ -319,7 +209,7 @@ namespace CarsVelingrad.WindowsFormsApp
             // comboBoxBrand
             // 
             this.comboBoxBrand.FormattingEnabled = true;
-            this.comboBoxBrand.Location = new System.Drawing.Point(96, 69);
+            this.comboBoxBrand.Location = new System.Drawing.Point(117, 69);
             this.comboBoxBrand.Name = "comboBoxBrand";
             this.comboBoxBrand.Size = new System.Drawing.Size(244, 38);
             this.comboBoxBrand.TabIndex = 25;
@@ -327,7 +217,7 @@ namespace CarsVelingrad.WindowsFormsApp
             // comboBoxModel
             // 
             this.comboBoxModel.FormattingEnabled = true;
-            this.comboBoxModel.Location = new System.Drawing.Point(96, 113);
+            this.comboBoxModel.Location = new System.Drawing.Point(117, 114);
             this.comboBoxModel.Name = "comboBoxModel";
             this.comboBoxModel.Size = new System.Drawing.Size(244, 38);
             this.comboBoxModel.TabIndex = 26;
@@ -335,7 +225,7 @@ namespace CarsVelingrad.WindowsFormsApp
             // comboBoxVehicleType
             // 
             this.comboBoxVehicleType.FormattingEnabled = true;
-            this.comboBoxVehicleType.Location = new System.Drawing.Point(96, 158);
+            this.comboBoxVehicleType.Location = new System.Drawing.Point(117, 156);
             this.comboBoxVehicleType.Name = "comboBoxVehicleType";
             this.comboBoxVehicleType.Size = new System.Drawing.Size(244, 38);
             this.comboBoxVehicleType.TabIndex = 27;
@@ -343,74 +233,193 @@ namespace CarsVelingrad.WindowsFormsApp
             // comboBoxEngineType
             // 
             this.comboBoxEngineType.FormattingEnabled = true;
-            this.comboBoxEngineType.Location = new System.Drawing.Point(96, 202);
+            this.comboBoxEngineType.Location = new System.Drawing.Point(117, 200);
             this.comboBoxEngineType.Name = "comboBoxEngineType";
             this.comboBoxEngineType.Size = new System.Drawing.Size(244, 38);
             this.comboBoxEngineType.TabIndex = 28;
             // 
             // textBoxColor
             // 
-            this.textBoxColor.Location = new System.Drawing.Point(96, 246);
+            this.textBoxColor.Location = new System.Drawing.Point(117, 248);
             this.textBoxColor.Name = "textBoxColor";
             this.textBoxColor.Size = new System.Drawing.Size(244, 35);
             this.textBoxColor.TabIndex = 29;
             // 
             // textBoxPrice
             // 
-            this.textBoxPrice.Location = new System.Drawing.Point(96, 289);
+            this.textBoxPrice.Location = new System.Drawing.Point(117, 301);
             this.textBoxPrice.Name = "textBoxPrice";
             this.textBoxPrice.Size = new System.Drawing.Size(244, 35);
             this.textBoxPrice.TabIndex = 30;
             // 
             // textBoxHorsePower
             // 
-            this.textBoxHorsePower.Location = new System.Drawing.Point(159, 330);
+            this.textBoxHorsePower.Location = new System.Drawing.Point(160, 347);
             this.textBoxHorsePower.Name = "textBoxHorsePower";
             this.textBoxHorsePower.Size = new System.Drawing.Size(181, 35);
             this.textBoxHorsePower.TabIndex = 31;
             // 
             // textBoxEngineVolume
             // 
-            this.textBoxEngineVolume.Location = new System.Drawing.Point(255, 371);
+            this.textBoxEngineVolume.Location = new System.Drawing.Point(265, 399);
             this.textBoxEngineVolume.Name = "textBoxEngineVolume";
             this.textBoxEngineVolume.Size = new System.Drawing.Size(175, 35);
             this.textBoxEngineVolume.TabIndex = 32;
             // 
             // textBoxRun
             // 
-            this.textBoxRun.Location = new System.Drawing.Point(101, 414);
+            this.textBoxRun.Location = new System.Drawing.Point(117, 454);
             this.textBoxRun.Name = "textBoxRun";
             this.textBoxRun.Size = new System.Drawing.Size(175, 35);
             this.textBoxRun.TabIndex = 33;
             // 
             // textBoxCity
             // 
-            this.textBoxCity.Location = new System.Drawing.Point(202, 455);
+            this.textBoxCity.Location = new System.Drawing.Point(201, 500);
             this.textBoxCity.Name = "textBoxCity";
             this.textBoxCity.Size = new System.Drawing.Size(198, 35);
             this.textBoxCity.TabIndex = 34;
             // 
             // textBoxCountry
             // 
-            this.textBoxCountry.Location = new System.Drawing.Point(119, 496);
+            this.textBoxCountry.Location = new System.Drawing.Point(140, 547);
             this.textBoxCountry.Name = "textBoxCountry";
-            this.textBoxCountry.Size = new System.Drawing.Size(198, 35);
+            this.textBoxCountry.Size = new System.Drawing.Size(168, 35);
             this.textBoxCountry.TabIndex = 35;
             // 
-            // comboBoxZipCode
+            // textBoxZipcode
             // 
-            this.comboBoxZipCode.FormattingEnabled = true;
-            this.comboBoxZipCode.Location = new System.Drawing.Point(169, 537);
-            this.comboBoxZipCode.Name = "comboBoxZipCode";
-            this.comboBoxZipCode.Size = new System.Drawing.Size(148, 38);
-            this.comboBoxZipCode.TabIndex = 36;
+            this.textBoxZipcode.Location = new System.Drawing.Point(180, 601);
+            this.textBoxZipcode.Name = "textBoxZipcode";
+            this.textBoxZipcode.Size = new System.Drawing.Size(148, 35);
+            this.textBoxZipcode.TabIndex = 36;
+            // 
+            // checkBoxHasStabilityControl
+            // 
+            this.checkBoxHasStabilityControl.AutoSize = true;
+            this.checkBoxHasStabilityControl.Location = new System.Drawing.Point(616, 117);
+            this.checkBoxHasStabilityControl.Name = "checkBoxHasStabilityControl";
+            this.checkBoxHasStabilityControl.Size = new System.Drawing.Size(268, 34);
+            this.checkBoxHasStabilityControl.TabIndex = 37;
+            this.checkBoxHasStabilityControl.Text = "Стабилизираща система";
+            this.checkBoxHasStabilityControl.UseVisualStyleBackColor = true;
+            this.checkBoxHasStabilityControl.CheckedChanged += new System.EventHandler(this.checkBoxHasStabilityControl_CheckedChanged);
+            // 
+            // checkBoxHasDVD
+            // 
+            this.checkBoxHasDVD.AutoSize = true;
+            this.checkBoxHasDVD.Location = new System.Drawing.Point(616, 155);
+            this.checkBoxHasDVD.Name = "checkBoxHasDVD";
+            this.checkBoxHasDVD.Size = new System.Drawing.Size(201, 34);
+            this.checkBoxHasDVD.TabIndex = 38;
+            this.checkBoxHasDVD.Text = "DVD - устройство";
+            this.checkBoxHasDVD.UseVisualStyleBackColor = true;
+            this.checkBoxHasDVD.CheckedChanged += new System.EventHandler(this.checkBoxHasDVD_CheckedChanged);
+            // 
+            // checkBoxHasAllWheelDriveSystem
+            // 
+            this.checkBoxHasAllWheelDriveSystem.AutoSize = true;
+            this.checkBoxHasAllWheelDriveSystem.Location = new System.Drawing.Point(616, 199);
+            this.checkBoxHasAllWheelDriveSystem.Name = "checkBoxHasAllWheelDriveSystem";
+            this.checkBoxHasAllWheelDriveSystem.Size = new System.Drawing.Size(323, 34);
+            this.checkBoxHasAllWheelDriveSystem.TabIndex = 39;
+            this.checkBoxHasAllWheelDriveSystem.Text = "Задвижване на всички колела";
+            this.checkBoxHasAllWheelDriveSystem.UseVisualStyleBackColor = true;
+            this.checkBoxHasAllWheelDriveSystem.CheckedChanged += new System.EventHandler(this.checkBoxHasAllWheelDriveSystem_CheckedChanged);
+            // 
+            // checkBoxHasABS
+            // 
+            this.checkBoxHasABS.AutoSize = true;
+            this.checkBoxHasABS.Location = new System.Drawing.Point(616, 239);
+            this.checkBoxHasABS.Name = "checkBoxHasABS";
+            this.checkBoxHasABS.Size = new System.Drawing.Size(271, 34);
+            this.checkBoxHasABS.TabIndex = 40;
+            this.checkBoxHasABS.Text = "Антиблокираща система";
+            this.checkBoxHasABS.UseVisualStyleBackColor = true;
+            this.checkBoxHasABS.CheckedChanged += new System.EventHandler(this.checkBoxHasABS_CheckedChanged);
+            // 
+            // checkBoxHasClimatronic
+            // 
+            this.checkBoxHasClimatronic.AutoSize = true;
+            this.checkBoxHasClimatronic.Location = new System.Drawing.Point(616, 280);
+            this.checkBoxHasClimatronic.Name = "checkBoxHasClimatronic";
+            this.checkBoxHasClimatronic.Size = new System.Drawing.Size(171, 34);
+            this.checkBoxHasClimatronic.TabIndex = 41;
+            this.checkBoxHasClimatronic.Text = "Климатроника";
+            this.checkBoxHasClimatronic.UseVisualStyleBackColor = true;
+            this.checkBoxHasClimatronic.CheckedChanged += new System.EventHandler(this.checkBoxHasClimatronic_CheckedChanged);
+            // 
+            // checkBoxHasCruiseControl
+            // 
+            this.checkBoxHasCruiseControl.AutoSize = true;
+            this.checkBoxHasCruiseControl.Location = new System.Drawing.Point(616, 320);
+            this.checkBoxHasCruiseControl.Name = "checkBoxHasCruiseControl";
+            this.checkBoxHasCruiseControl.Size = new System.Drawing.Size(134, 34);
+            this.checkBoxHasCruiseControl.TabIndex = 42;
+            this.checkBoxHasCruiseControl.Text = "Автопилот";
+            this.checkBoxHasCruiseControl.UseVisualStyleBackColor = true;
+            this.checkBoxHasCruiseControl.CheckedChanged += new System.EventHandler(this.checkBoxHasCruiseControl_CheckedChanged);
+            // 
+            // checkBoxHasParkAssist
+            // 
+            this.checkBoxHasParkAssist.AutoSize = true;
+            this.checkBoxHasParkAssist.Location = new System.Drawing.Point(616, 360);
+            this.checkBoxHasParkAssist.Name = "checkBoxHasParkAssist";
+            this.checkBoxHasParkAssist.Size = new System.Drawing.Size(137, 34);
+            this.checkBoxHasParkAssist.TabIndex = 43;
+            this.checkBoxHasParkAssist.Text = "Партроник";
+            this.checkBoxHasParkAssist.UseVisualStyleBackColor = true;
+            this.checkBoxHasParkAssist.CheckedChanged += new System.EventHandler(this.checkBoxHasParkAssist_CheckedChanged);
+            // 
+            // checkBoxHasRadioBluetooth
+            // 
+            this.checkBoxHasRadioBluetooth.AutoSize = true;
+            this.checkBoxHasRadioBluetooth.Location = new System.Drawing.Point(616, 400);
+            this.checkBoxHasRadioBluetooth.Name = "checkBoxHasRadioBluetooth";
+            this.checkBoxHasRadioBluetooth.Size = new System.Drawing.Size(194, 34);
+            this.checkBoxHasRadioBluetooth.TabIndex = 44;
+            this.checkBoxHasRadioBluetooth.Text = "Безжичен блутут";
+            this.checkBoxHasRadioBluetooth.UseVisualStyleBackColor = true;
+            this.checkBoxHasRadioBluetooth.CheckedChanged += new System.EventHandler(this.checkBoxHasRadioBluetooth_CheckedChanged);
+            // 
+            // checkBoxHasCentralLock
+            // 
+            this.checkBoxHasCentralLock.AutoSize = true;
+            this.checkBoxHasCentralLock.Location = new System.Drawing.Point(616, 440);
+            this.checkBoxHasCentralLock.Name = "checkBoxHasCentralLock";
+            this.checkBoxHasCentralLock.Size = new System.Drawing.Size(259, 34);
+            this.checkBoxHasCentralLock.TabIndex = 45;
+            this.checkBoxHasCentralLock.Text = "Централно заключване";
+            this.checkBoxHasCentralLock.UseVisualStyleBackColor = true;
+            this.checkBoxHasCentralLock.CheckedChanged += new System.EventHandler(this.checkBoxHasCentralLock_CheckedChanged);
+            // 
+            // checkBoxHasElectricWindows
+            // 
+            this.checkBoxHasElectricWindows.AutoSize = true;
+            this.checkBoxHasElectricWindows.Location = new System.Drawing.Point(616, 480);
+            this.checkBoxHasElectricWindows.Name = "checkBoxHasElectricWindows";
+            this.checkBoxHasElectricWindows.Size = new System.Drawing.Size(232, 34);
+            this.checkBoxHasElectricWindows.TabIndex = 46;
+            this.checkBoxHasElectricWindows.Text = "Електрически стъкла";
+            this.checkBoxHasElectricWindows.UseVisualStyleBackColor = true;
+            this.checkBoxHasElectricWindows.CheckedChanged += new System.EventHandler(this.checkBoxHasElectricWindows_CheckedChanged);
             // 
             // CreateVehicleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(814, 588);
-            this.Controls.Add(this.comboBoxZipCode);
+            this.ClientSize = new System.Drawing.Size(1014, 650);
+            this.Controls.Add(this.checkBoxHasElectricWindows);
+            this.Controls.Add(this.checkBoxHasCentralLock);
+            this.Controls.Add(this.checkBoxHasRadioBluetooth);
+            this.Controls.Add(this.checkBoxHasParkAssist);
+            this.Controls.Add(this.checkBoxHasCruiseControl);
+            this.Controls.Add(this.checkBoxHasClimatronic);
+            this.Controls.Add(this.checkBoxHasABS);
+            this.Controls.Add(this.checkBoxHasAllWheelDriveSystem);
+            this.Controls.Add(this.checkBoxHasDVD);
+            this.Controls.Add(this.checkBoxHasStabilityControl);
+            this.Controls.Add(this.textBoxZipcode);
             this.Controls.Add(this.textBoxCountry);
             this.Controls.Add(this.textBoxCity);
             this.Controls.Add(this.textBoxRun);
@@ -423,33 +432,24 @@ namespace CarsVelingrad.WindowsFormsApp
             this.Controls.Add(this.comboBoxModel);
             this.Controls.Add(this.comboBoxBrand);
             this.Controls.Add(this.Create);
-            this.Controls.Add(this.radioButtonHasRadioBluetooth);
-            this.Controls.Add(this.radioButtonHasElectricWindows);
-            this.Controls.Add(this.radioButtonHasCentralLock);
-            this.Controls.Add(this.radioButtonHasParkAssist);
-            this.Controls.Add(this.radioButtonHasCruiseControl);
-            this.Controls.Add(this.radioButtonHasClimatronic);
-            this.Controls.Add(this.radioButtonHasABS);
-            this.Controls.Add(this.radioButtonHasAllWheelDriveSystem);
-            this.Controls.Add(this.radioButtonHasDVD);
-            this.Controls.Add(this.radioButtonHasStabilityControl);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.labelColor);
+            this.Controls.Add(this.labelCountry);
+            this.Controls.Add(this.labelZipcode);
+            this.Controls.Add(this.labelCity);
+            this.Controls.Add(this.labelRun);
+            this.Controls.Add(this.labelPrice);
+            this.Controls.Add(this.labelEngineVolume);
+            this.Controls.Add(this.labelHorsePower);
+            this.Controls.Add(this.labelEngineType);
+            this.Controls.Add(this.labelVehicleType);
+            this.Controls.Add(this.labelModel);
+            this.Controls.Add(this.labelBrand);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Name = "CreateVehicleForm";
             this.Text = "CreateVehicleForm";
+            this.Load += new System.EventHandler(this.CreateVehicleForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -458,29 +458,19 @@ namespace CarsVelingrad.WindowsFormsApp
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label labelBrand;
+        private System.Windows.Forms.Label labelModel;
+        private System.Windows.Forms.Label labelVehicleType;
+        private System.Windows.Forms.Label labelEngineType;
+        private System.Windows.Forms.Label labelHorsePower;
+        private System.Windows.Forms.Label labelEngineVolume;
+        private System.Windows.Forms.Label labelPrice;
+        private System.Windows.Forms.Label labelRun;
+        private System.Windows.Forms.Label labelCity;
+        private System.Windows.Forms.Label labelZipcode;
+        private System.Windows.Forms.Label labelCountry;
+        private System.Windows.Forms.Label labelColor;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.RadioButton radioButtonHasStabilityControl;
-        private System.Windows.Forms.RadioButton radioButtonHasDVD;
-        private System.Windows.Forms.RadioButton radioButtonHasAllWheelDriveSystem;
-        private System.Windows.Forms.RadioButton radioButtonHasABS;
-        private System.Windows.Forms.RadioButton radioButtonHasClimatronic;
-        private System.Windows.Forms.RadioButton radioButtonHasCruiseControl;
-        private System.Windows.Forms.RadioButton radioButtonHasParkAssist;
-        private System.Windows.Forms.RadioButton radioButtonHasCentralLock;
-        private System.Windows.Forms.RadioButton radioButtonHasElectricWindows;
-        private System.Windows.Forms.RadioButton radioButtonHasRadioBluetooth;
         private System.Windows.Forms.Button Create;
         private System.Windows.Forms.ComboBox comboBoxBrand;
         private System.Windows.Forms.ComboBox comboBoxModel;
@@ -494,6 +484,16 @@ namespace CarsVelingrad.WindowsFormsApp
         private System.Windows.Forms.TextBox textBoxRun;
         private System.Windows.Forms.TextBox textBoxCity;
         private System.Windows.Forms.TextBox textBoxCountry;
-        private System.Windows.Forms.ComboBox comboBoxZipCode;
+        private System.Windows.Forms.TextBox textBoxZipcode;
+        private System.Windows.Forms.CheckBox checkBoxHasStabilityControl;
+        private System.Windows.Forms.CheckBox checkBoxHasDVD;
+        private System.Windows.Forms.CheckBox checkBoxHasAllWheelDriveSystem;
+        private System.Windows.Forms.CheckBox checkBoxHasABS;
+        private System.Windows.Forms.CheckBox checkBoxHasClimatronic;
+        private System.Windows.Forms.CheckBox checkBoxHasCruiseControl;
+        private System.Windows.Forms.CheckBox checkBoxHasParkAssist;
+        private System.Windows.Forms.CheckBox checkBoxHasRadioBluetooth;
+        private System.Windows.Forms.CheckBox checkBoxHasCentralLock;
+        private System.Windows.Forms.CheckBox checkBoxHasElectricWindows;
     }
 }

@@ -22,7 +22,7 @@ namespace CarsVelingrad.WindowsFormsApp
             this.windowsFormService = windowsFormService;
         }
 
-        private void CreateVehicleForm_Load_1(object sender, EventArgs e)
+        private void CreateVehicleForm_Load(object sender, EventArgs e)
         {
             UpdateComboBoxItems();
         }
@@ -31,6 +31,8 @@ namespace CarsVelingrad.WindowsFormsApp
         {
             this.comboBoxBrand.Items.AddRange(windowsFormService.GetBrands());
             this.comboBoxModel.Items.AddRange(windowsFormService.GetModels());
+            this.comboBoxVehicleType.Items.AddRange(windowsFormService.GetVehicleTypes());
+            this.comboBoxEngineType.Items.AddRange(windowsFormService.GetEngineTypes());
         }
 
         private void ClearTextAndComboBoxes(System.Windows.Forms.Control.ControlCollection ctrls)
@@ -62,7 +64,7 @@ namespace CarsVelingrad.WindowsFormsApp
                     Run = int.Parse(textBoxRun.Text),
                     City = textBoxCity.Text,
                     Country = textBoxCountry.Text,
-                    Zipcode = int.Parse(comboBoxZipCode.Text)
+                    Zipcode = int.Parse(textBoxZipcode.Text)
                 };
 
                 this.vehicleService.Create(model);
@@ -75,6 +77,56 @@ namespace CarsVelingrad.WindowsFormsApp
 
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void checkBoxHasStabilityControl_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBoxHasStabilityControl.Checked = true;
+        }
+
+        private void checkBoxHasDVD_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBoxHasDVD.Checked = true;
+        }
+
+        private void checkBoxHasAllWheelDriveSystem_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBoxHasAllWheelDriveSystem.Checked = true;
+        }
+
+        private void checkBoxHasABS_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBoxHasABS.Checked = true;
+        }
+
+        private void checkBoxHasClimatronic_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBoxHasClimatronic.Checked = true;
+        }
+
+        private void checkBoxHasCruiseControl_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBoxHasCruiseControl.Checked = true;
+        }
+
+        private void checkBoxHasParkAssist_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBoxHasParkAssist.Checked = true;
+        }
+
+        private void checkBoxHasRadioBluetooth_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBoxHasRadioBluetooth.Checked = true;
+        }
+
+        private void checkBoxHasCentralLock_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBoxHasCentralLock.Checked = true;
+        }
+
+        private void checkBoxHasElectricWindows_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBoxHasElectricWindows.Checked = true;
         }
     }
 }

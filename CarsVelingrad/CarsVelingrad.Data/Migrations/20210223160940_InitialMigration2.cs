@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace CarsVelingrad.Data.Migrations
 {
-    public partial class InitialMigration : Migration
+    public partial class InitialMigration2 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -118,14 +118,14 @@ namespace CarsVelingrad.Data.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ZipCode = table.Column<int>(type: "int", nullable: false),
-                    CityId = table.Column<int>(type: "int", nullable: false)
+                    CountryId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Cities", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Cities_Countries_CityId",
-                        column: x => x.CityId,
+                        name: "FK_Cities_Countries_CountryId",
+                        column: x => x.CountryId,
                         principalTable: "Countries",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -257,9 +257,9 @@ namespace CarsVelingrad.Data.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Cities_CityId",
+                name: "IX_Cities_CountryId",
                 table: "Cities",
-                column: "CityId");
+                column: "CountryId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Engines_EngineTypeId",

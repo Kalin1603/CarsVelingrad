@@ -31,5 +31,11 @@ namespace CarsVelingrad.WindowsFormsApp
             CreateVehicleForm createForm = new CreateVehicleForm(this.vehicleServices,this.windowsFormService);
             createForm.Show();
         }
+
+        private void buttonCatalog_Click(object sender, EventArgs e)
+        {
+            CatalogForm form = new CatalogForm(this.vehicleServices);
+            form.Show();
+        }
     }
 }

@@ -24,5 +24,16 @@
         {
             return this.dbContext.Models.Select(x => x.Name).ToArray();
         }
+
+        public object[] GetVehicleTypes()
+        {
+            return this.dbContext.VehicleTypes.Select(x => x.Name).ToArray();
+        }
+
+        public object[] GetEngineTypes()
+        {
+            return this.dbContext.EngineTypes.Select(x => x.Name).ToArray();
+        }
+
     }
 }
