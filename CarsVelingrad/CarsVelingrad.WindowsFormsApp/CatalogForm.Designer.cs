@@ -52,10 +52,10 @@ namespace CarsVelingrad.WindowsFormsApp
             this.Date,
             this.Run,
             this.Location});
-            this.dataGridView1.Location = new System.Drawing.Point(45, 52);
+            this.dataGridView1.Location = new System.Drawing.Point(45, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(648, 208);
+            this.dataGridView1.Size = new System.Drawing.Size(908, 402);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -91,18 +91,19 @@ namespace CarsVelingrad.WindowsFormsApp
             // 
             // buttonPrevious
             // 
-            this.buttonPrevious.Location = new System.Drawing.Point(45, 358);
+            this.buttonPrevious.Location = new System.Drawing.Point(45, 429);
             this.buttonPrevious.Name = "buttonPrevious";
-            this.buttonPrevious.Size = new System.Drawing.Size(221, 74);
+            this.buttonPrevious.Size = new System.Drawing.Size(193, 54);
             this.buttonPrevious.TabIndex = 1;
             this.buttonPrevious.Text = "<<";
             this.buttonPrevious.UseVisualStyleBackColor = true;
+            this.buttonPrevious.Click += new System.EventHandler(this.buttonPrevious_Click);
             // 
             // buttonNext
             // 
-            this.buttonNext.Location = new System.Drawing.Point(460, 358);
+            this.buttonNext.Location = new System.Drawing.Point(281, 429);
             this.buttonNext.Name = "buttonNext";
-            this.buttonNext.Size = new System.Drawing.Size(233, 74);
+            this.buttonNext.Size = new System.Drawing.Size(198, 54);
             this.buttonNext.TabIndex = 2;
             this.buttonNext.Text = ">>";
             this.buttonNext.UseVisualStyleBackColor = true;
@@ -111,7 +112,7 @@ namespace CarsVelingrad.WindowsFormsApp
             // labelPageInfo
             // 
             this.labelPageInfo.AutoSize = true;
-            this.labelPageInfo.Location = new System.Drawing.Point(757, 380);
+            this.labelPageInfo.Location = new System.Drawing.Point(705, 417);
             this.labelPageInfo.Name = "labelPageInfo";
             this.labelPageInfo.Size = new System.Drawing.Size(235, 30);
             this.labelPageInfo.TabIndex = 3;
@@ -122,7 +123,7 @@ namespace CarsVelingrad.WindowsFormsApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(979, 484);
+            this.ClientSize = new System.Drawing.Size(1033, 484);
             this.Controls.Add(this.labelPageInfo);
             this.Controls.Add(this.buttonNext);
             this.Controls.Add(this.buttonPrevious);
