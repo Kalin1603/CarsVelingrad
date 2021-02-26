@@ -66,6 +66,16 @@ namespace CarsVelingrad.WindowsFormsApp
                     Country = textBoxCountry.Text,
                     Zipcode = int.Parse(textBoxZipcode.Text)
                 };
+                checkBoxHasStabilityControl.Checked = true;
+                checkBoxHasDVD.Checked = true;
+                checkBoxHasAllWheelDriveSystem.Checked = true;
+                checkBoxHasABS.Checked = true;
+                checkBoxHasClimatronic.Checked = true;
+                checkBoxHasCruiseControl.Checked = true;
+                checkBoxHasParkAssist.Checked = true;
+                checkBoxHasRadioBluetooth.Checked = true;
+                checkBoxHasCentralLock.Checked = true;
+                checkBoxHasElectricWindows.Checked = true;
 
                 this.vehicleService.Create(model);
                 MessageBox.Show("Автомобилът е успешно добавен в базата от данни!");
@@ -77,56 +87,6 @@ namespace CarsVelingrad.WindowsFormsApp
 
                 MessageBox.Show(ex.Message);
             }
-        }
-
-        private void checkBoxHasStabilityControl_CheckedChanged(object sender, EventArgs e)
-        {
-            checkBoxHasStabilityControl.Checked = true;
-        }
-
-        private void checkBoxHasDVD_CheckedChanged(object sender, EventArgs e)
-        {
-            checkBoxHasDVD.Checked = true;
-        }
-
-        private void checkBoxHasAllWheelDriveSystem_CheckedChanged(object sender, EventArgs e)
-        {
-            checkBoxHasAllWheelDriveSystem.Checked = true;
-        }
-
-        private void checkBoxHasABS_CheckedChanged(object sender, EventArgs e)
-        {
-            checkBoxHasABS.Checked = true;
-        }
-
-        private void checkBoxHasClimatronic_CheckedChanged(object sender, EventArgs e)
-        {
-            checkBoxHasClimatronic.Checked = true;
-        }
-
-        private void checkBoxHasCruiseControl_CheckedChanged(object sender, EventArgs e)
-        {
-            checkBoxHasCruiseControl.Checked = true;
-        }
-
-        private void checkBoxHasParkAssist_CheckedChanged(object sender, EventArgs e)
-        {
-            checkBoxHasParkAssist.Checked = true;
-        }
-
-        private void checkBoxHasRadioBluetooth_CheckedChanged(object sender, EventArgs e)
-        {
-            checkBoxHasRadioBluetooth.Checked = true;
-        }
-
-        private void checkBoxHasCentralLock_CheckedChanged(object sender, EventArgs e)
-        {
-            checkBoxHasCentralLock.Checked = true;
-        }
-
-        private void checkBoxHasElectricWindows_CheckedChanged(object sender, EventArgs e)
-        {
-            checkBoxHasElectricWindows.Checked = true;
         }
     }
 }

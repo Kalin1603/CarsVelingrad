@@ -303,7 +303,6 @@ namespace CarsVelingrad.WindowsFormsApp
             this.checkBoxHasStabilityControl.TabIndex = 37;
             this.checkBoxHasStabilityControl.Text = "Стабилизираща система";
             this.checkBoxHasStabilityControl.UseVisualStyleBackColor = true;
-            this.checkBoxHasStabilityControl.CheckedChanged += new System.EventHandler(this.checkBoxHasStabilityControl_CheckedChanged);
             // 
             // checkBoxHasDVD
             // 
@@ -314,7 +313,6 @@ namespace CarsVelingrad.WindowsFormsApp
             this.checkBoxHasDVD.TabIndex = 38;
             this.checkBoxHasDVD.Text = "DVD - устройство";
             this.checkBoxHasDVD.UseVisualStyleBackColor = true;
-            this.checkBoxHasDVD.CheckedChanged += new System.EventHandler(this.checkBoxHasDVD_CheckedChanged);
             // 
             // checkBoxHasAllWheelDriveSystem
             // 
@@ -325,7 +323,6 @@ namespace CarsVelingrad.WindowsFormsApp
             this.checkBoxHasAllWheelDriveSystem.TabIndex = 39;
             this.checkBoxHasAllWheelDriveSystem.Text = "Задвижване на всички колела";
             this.checkBoxHasAllWheelDriveSystem.UseVisualStyleBackColor = true;
-            this.checkBoxHasAllWheelDriveSystem.CheckedChanged += new System.EventHandler(this.checkBoxHasAllWheelDriveSystem_CheckedChanged);
             // 
             // checkBoxHasABS
             // 
@@ -336,7 +333,6 @@ namespace CarsVelingrad.WindowsFormsApp
             this.checkBoxHasABS.TabIndex = 40;
             this.checkBoxHasABS.Text = "Антиблокираща система";
             this.checkBoxHasABS.UseVisualStyleBackColor = true;
-            this.checkBoxHasABS.CheckedChanged += new System.EventHandler(this.checkBoxHasABS_CheckedChanged);
             // 
             // checkBoxHasClimatronic
             // 
@@ -347,7 +343,6 @@ namespace CarsVelingrad.WindowsFormsApp
             this.checkBoxHasClimatronic.TabIndex = 41;
             this.checkBoxHasClimatronic.Text = "Климатроника";
             this.checkBoxHasClimatronic.UseVisualStyleBackColor = true;
-            this.checkBoxHasClimatronic.CheckedChanged += new System.EventHandler(this.checkBoxHasClimatronic_CheckedChanged);
             // 
             // checkBoxHasCruiseControl
             // 
@@ -358,7 +353,6 @@ namespace CarsVelingrad.WindowsFormsApp
             this.checkBoxHasCruiseControl.TabIndex = 42;
             this.checkBoxHasCruiseControl.Text = "Автопилот";
             this.checkBoxHasCruiseControl.UseVisualStyleBackColor = true;
-            this.checkBoxHasCruiseControl.CheckedChanged += new System.EventHandler(this.checkBoxHasCruiseControl_CheckedChanged);
             // 
             // checkBoxHasParkAssist
             // 
@@ -369,7 +363,6 @@ namespace CarsVelingrad.WindowsFormsApp
             this.checkBoxHasParkAssist.TabIndex = 43;
             this.checkBoxHasParkAssist.Text = "Партроник";
             this.checkBoxHasParkAssist.UseVisualStyleBackColor = true;
-            this.checkBoxHasParkAssist.CheckedChanged += new System.EventHandler(this.checkBoxHasParkAssist_CheckedChanged);
             // 
             // checkBoxHasRadioBluetooth
             // 
@@ -380,7 +373,6 @@ namespace CarsVelingrad.WindowsFormsApp
             this.checkBoxHasRadioBluetooth.TabIndex = 44;
             this.checkBoxHasRadioBluetooth.Text = "Безжичен блутут";
             this.checkBoxHasRadioBluetooth.UseVisualStyleBackColor = true;
-            this.checkBoxHasRadioBluetooth.CheckedChanged += new System.EventHandler(this.checkBoxHasRadioBluetooth_CheckedChanged);
             // 
             // checkBoxHasCentralLock
             // 
@@ -391,7 +383,6 @@ namespace CarsVelingrad.WindowsFormsApp
             this.checkBoxHasCentralLock.TabIndex = 45;
             this.checkBoxHasCentralLock.Text = "Централно заключване";
             this.checkBoxHasCentralLock.UseVisualStyleBackColor = true;
-            this.checkBoxHasCentralLock.CheckedChanged += new System.EventHandler(this.checkBoxHasCentralLock_CheckedChanged);
             // 
             // checkBoxHasElectricWindows
             // 
@@ -402,7 +393,6 @@ namespace CarsVelingrad.WindowsFormsApp
             this.checkBoxHasElectricWindows.TabIndex = 46;
             this.checkBoxHasElectricWindows.Text = "Електрически стъкла";
             this.checkBoxHasElectricWindows.UseVisualStyleBackColor = true;
-            this.checkBoxHasElectricWindows.CheckedChanged += new System.EventHandler(this.checkBoxHasElectricWindows_CheckedChanged);
             // 
             // CreateVehicleForm
             // 

@@ -14,17 +14,13 @@ namespace CarsVelingrad.WindowsFormsApp
     {
         private readonly VehicleService vehicleServices;
         private VehiclesViewModel model; 
+
         public CatalogForm(VehicleService vehicleServices)
         {
             InitializeComponent();
             this.vehicleServices = vehicleServices;
-            
-           
         }
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
-        }
         private void CatalogForm_Load(object sender, EventArgs e)
         {
             model = vehicleServices.GetVehicles();
@@ -48,11 +44,13 @@ namespace CarsVelingrad.WindowsFormsApp
             }
             labelPageInfo.Text = $"Страница: {model.PageNumber} / {model.PagesCount}\nАвтомобили: {model.ElementsCount}";
         }
-        private void label1_Click(object sender, EventArgs e)
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
-        private void button2_Click(object sender, EventArgs e)
+
+        private void buttonNext_Click(object sender, EventArgs e)
         {
             if (model.HasNextPage)
             {

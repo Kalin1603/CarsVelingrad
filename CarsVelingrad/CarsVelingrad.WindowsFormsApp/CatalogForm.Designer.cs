@@ -61,53 +61,53 @@ namespace CarsVelingrad.WindowsFormsApp
             // 
             // Brand
             // 
-            this.Brand.HeaderText = "Brand";
+            this.Brand.HeaderText = "Марка";
             this.Brand.Name = "Brand";
             // 
             // Model
             // 
-            this.Model.HeaderText = "Model";
+            this.Model.HeaderText = "Модел";
             this.Model.Name = "Model";
             // 
             // Price
             // 
-            this.Price.HeaderText = "Price";
+            this.Price.HeaderText = "Цена";
             this.Price.Name = "Price";
             // 
             // Date
             // 
-            this.Date.HeaderText = "Date";
+            this.Date.HeaderText = "Дата";
             this.Date.Name = "Date";
             // 
             // Run
             // 
-            this.Run.HeaderText = "Run";
+            this.Run.HeaderText = "Пробег";
             this.Run.Name = "Run";
             // 
             // Location
             // 
-            this.Location.HeaderText = "Location";
+            this.Location.HeaderText = "Местоположение";
             this.Location.Name = "Location";
             // 
             // buttonPrevious
             // 
-            this.buttonPrevious.Location = new System.Drawing.Point(45, 429);
+            this.buttonPrevious.Location = new System.Drawing.Point(45, 420);
             this.buttonPrevious.Name = "buttonPrevious";
-            this.buttonPrevious.Size = new System.Drawing.Size(193, 54);
+            this.buttonPrevious.Size = new System.Drawing.Size(208, 77);
             this.buttonPrevious.TabIndex = 1;
-            this.buttonPrevious.Text = "<<";
+            this.buttonPrevious.Text = "Предишна страница";
             this.buttonPrevious.UseVisualStyleBackColor = true;
             this.buttonPrevious.Click += new System.EventHandler(this.buttonPrevious_Click);
             // 
             // buttonNext
             // 
-            this.buttonNext.Location = new System.Drawing.Point(281, 429);
+            this.buttonNext.Location = new System.Drawing.Point(281, 420);
             this.buttonNext.Name = "buttonNext";
-            this.buttonNext.Size = new System.Drawing.Size(198, 54);
+            this.buttonNext.Size = new System.Drawing.Size(210, 77);
             this.buttonNext.TabIndex = 2;
-            this.buttonNext.Text = ">>";
+            this.buttonNext.Text = "Следваща страница";
             this.buttonNext.UseVisualStyleBackColor = true;
-            this.buttonNext.Click += new System.EventHandler(this.button2_Click);
+            this.buttonNext.Click += new System.EventHandler(this.buttonNext_Click);
             // 
             // labelPageInfo
             // 
@@ -117,13 +117,12 @@ namespace CarsVelingrad.WindowsFormsApp
             this.labelPageInfo.Size = new System.Drawing.Size(235, 30);
             this.labelPageInfo.TabIndex = 3;
             this.labelPageInfo.Text = "TO DO - page number...";
-            this.labelPageInfo.Click += new System.EventHandler(this.label1_Click);
             // 
             // CatalogForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1033, 484);
+            this.ClientSize = new System.Drawing.Size(1049, 502);
             this.Controls.Add(this.labelPageInfo);
             this.Controls.Add(this.buttonNext);
             this.Controls.Add(this.buttonPrevious);
