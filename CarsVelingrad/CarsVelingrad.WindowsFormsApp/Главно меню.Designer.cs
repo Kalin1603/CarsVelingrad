@@ -74,7 +74,7 @@ namespace CarsVelingrad.WindowsFormsApp
             this.Controls.Add(this.labelTitle);
             this.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Name = "Main";
-            this.Text = "MainForm";
+            this.Text = "Главно меню";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -1,7 +1,7 @@
 ﻿
 namespace CarsVelingrad.WindowsFormsApp
 {
-    partial class CatalogForm
+    partial class Каталог
     {
         /// <summary>
         /// Required designer variable.
@@ -118,17 +118,17 @@ namespace CarsVelingrad.WindowsFormsApp
             this.labelPageInfo.TabIndex = 3;
             this.labelPageInfo.Text = "TO DO - page number...";
             // 
-            // CatalogForm
+            // Каталог
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1049, 502);
+            this.ClientSize = new System.Drawing.Size(1117, 608);
             this.Controls.Add(this.labelPageInfo);
             this.Controls.Add(this.buttonNext);
             this.Controls.Add(this.buttonPrevious);
             this.Controls.Add(this.dataGridView1);
             this.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Name = "CatalogForm";
+            this.Name = "Каталог";
             this.Text = "CatalogForm";
             this.Load += new System.EventHandler(this.CatalogForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

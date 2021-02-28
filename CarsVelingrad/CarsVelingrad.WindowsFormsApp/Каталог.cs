@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace CarsVelingrad.WindowsFormsApp
 {
-    public partial class CatalogForm : Form
+    public partial class Каталог : Form
     {
         private readonly VehicleService vehicleServices;
         private VehiclesViewModel model; 
 
-        public CatalogForm(VehicleService vehicleServices)
+        public Каталог(VehicleService vehicleServices)
         {
             InitializeComponent();
             this.vehicleServices = vehicleServices;

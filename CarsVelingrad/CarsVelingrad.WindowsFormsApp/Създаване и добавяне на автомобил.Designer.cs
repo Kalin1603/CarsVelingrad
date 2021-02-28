@@ -128,9 +128,9 @@ namespace CarsVelingrad.WindowsFormsApp
             this.labelEngineVolume.AutoSize = true;
             this.labelEngineVolume.Location = new System.Drawing.Point(12, 401);
             this.labelEngineVolume.Name = "labelEngineVolume";
-            this.labelEngineVolume.Size = new System.Drawing.Size(237, 30);
+            this.labelEngineVolume.Size = new System.Drawing.Size(197, 30);
             this.labelEngineVolume.TabIndex = 6;
-            this.labelEngineVolume.Text = "Големина на двигателя";
+            this.labelEngineVolume.Text = "Обем на двигателя";
             // 
             // labelPrice
             // 
@@ -209,7 +209,7 @@ namespace CarsVelingrad.WindowsFormsApp
             // comboBoxBrand
             // 
             this.comboBoxBrand.FormattingEnabled = true;
-            this.comboBoxBrand.Location = new System.Drawing.Point(117, 69);
+            this.comboBoxBrand.Location = new System.Drawing.Point(148, 66);
             this.comboBoxBrand.Name = "comboBoxBrand";
             this.comboBoxBrand.Size = new System.Drawing.Size(244, 38);
             this.comboBoxBrand.TabIndex = 25;
@@ -217,7 +217,7 @@ namespace CarsVelingrad.WindowsFormsApp
             // comboBoxModel
             // 
             this.comboBoxModel.FormattingEnabled = true;
-            this.comboBoxModel.Location = new System.Drawing.Point(117, 114);
+            this.comboBoxModel.Location = new System.Drawing.Point(148, 115);
             this.comboBoxModel.Name = "comboBoxModel";
             this.comboBoxModel.Size = new System.Drawing.Size(244, 38);
             this.comboBoxModel.TabIndex = 26;
@@ -225,7 +225,7 @@ namespace CarsVelingrad.WindowsFormsApp
             // comboBoxVehicleType
             // 
             this.comboBoxVehicleType.FormattingEnabled = true;
-            this.comboBoxVehicleType.Location = new System.Drawing.Point(117, 156);
+            this.comboBoxVehicleType.Location = new System.Drawing.Point(148, 159);
             this.comboBoxVehicleType.Name = "comboBoxVehicleType";
             this.comboBoxVehicleType.Size = new System.Drawing.Size(244, 38);
             this.comboBoxVehicleType.TabIndex = 27;
@@ -233,65 +233,65 @@ namespace CarsVelingrad.WindowsFormsApp
             // comboBoxEngineType
             // 
             this.comboBoxEngineType.FormattingEnabled = true;
-            this.comboBoxEngineType.Location = new System.Drawing.Point(117, 200);
+            this.comboBoxEngineType.Location = new System.Drawing.Point(148, 199);
             this.comboBoxEngineType.Name = "comboBoxEngineType";
             this.comboBoxEngineType.Size = new System.Drawing.Size(244, 38);
             this.comboBoxEngineType.TabIndex = 28;
             // 
             // textBoxColor
             // 
-            this.textBoxColor.Location = new System.Drawing.Point(117, 248);
+            this.textBoxColor.Location = new System.Drawing.Point(148, 243);
             this.textBoxColor.Name = "textBoxColor";
             this.textBoxColor.Size = new System.Drawing.Size(244, 35);
             this.textBoxColor.TabIndex = 29;
             // 
             // textBoxPrice
             // 
-            this.textBoxPrice.Location = new System.Drawing.Point(117, 301);
+            this.textBoxPrice.Location = new System.Drawing.Point(148, 299);
             this.textBoxPrice.Name = "textBoxPrice";
             this.textBoxPrice.Size = new System.Drawing.Size(244, 35);
             this.textBoxPrice.TabIndex = 30;
             // 
             // textBoxHorsePower
             // 
-            this.textBoxHorsePower.Location = new System.Drawing.Point(160, 347);
+            this.textBoxHorsePower.Location = new System.Drawing.Point(236, 345);
             this.textBoxHorsePower.Name = "textBoxHorsePower";
             this.textBoxHorsePower.Size = new System.Drawing.Size(181, 35);
             this.textBoxHorsePower.TabIndex = 31;
             // 
             // textBoxEngineVolume
             // 
-            this.textBoxEngineVolume.Location = new System.Drawing.Point(265, 399);
+            this.textBoxEngineVolume.Location = new System.Drawing.Point(236, 398);
             this.textBoxEngineVolume.Name = "textBoxEngineVolume";
-            this.textBoxEngineVolume.Size = new System.Drawing.Size(175, 35);
+            this.textBoxEngineVolume.Size = new System.Drawing.Size(181, 35);
             this.textBoxEngineVolume.TabIndex = 32;
             // 
             // textBoxRun
             // 
-            this.textBoxRun.Location = new System.Drawing.Point(117, 454);
+            this.textBoxRun.Location = new System.Drawing.Point(148, 454);
             this.textBoxRun.Name = "textBoxRun";
             this.textBoxRun.Size = new System.Drawing.Size(175, 35);
             this.textBoxRun.TabIndex = 33;
             // 
             // textBoxCity
             // 
-            this.textBoxCity.Location = new System.Drawing.Point(201, 500);
+            this.textBoxCity.Location = new System.Drawing.Point(236, 495);
             this.textBoxCity.Name = "textBoxCity";
             this.textBoxCity.Size = new System.Drawing.Size(198, 35);
             this.textBoxCity.TabIndex = 34;
             // 
             // textBoxCountry
             // 
-            this.textBoxCountry.Location = new System.Drawing.Point(140, 547);
+            this.textBoxCountry.Location = new System.Drawing.Point(213, 547);
             this.textBoxCountry.Name = "textBoxCountry";
-            this.textBoxCountry.Size = new System.Drawing.Size(168, 35);
+            this.textBoxCountry.Size = new System.Drawing.Size(169, 35);
             this.textBoxCountry.TabIndex = 35;
             // 
             // textBoxZipcode
             // 
-            this.textBoxZipcode.Location = new System.Drawing.Point(180, 601);
+            this.textBoxZipcode.Location = new System.Drawing.Point(213, 598);
             this.textBoxZipcode.Name = "textBoxZipcode";
-            this.textBoxZipcode.Size = new System.Drawing.Size(148, 35);
+            this.textBoxZipcode.Size = new System.Drawing.Size(169, 35);
             this.textBoxZipcode.TabIndex = 36;
             // 
             // checkBoxHasStabilityControl

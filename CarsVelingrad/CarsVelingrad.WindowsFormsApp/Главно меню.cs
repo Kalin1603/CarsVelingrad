@@ -34,8 +34,10 @@ namespace CarsVelingrad.WindowsFormsApp
 
         private void buttonCatalog_Click(object sender, EventArgs e)
         {
-            CatalogForm form = new CatalogForm(this.vehicleServices);
+            Каталог form = new Каталог(this.vehicleServices);
             form.Show();
         }
+
+        
     }
 }
