@@ -4,4 +4,14 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CarsVelingrad.Data\CarsVelingrad.Data.csproj" />
+    <ProjectReference Include="..\CarsVelingrad.Services\CarsVelingrad.Services.csproj" />
+    <ProjectReference Include="..\CarsVelingrad.ViewModels\CarsVelingrad.ViewModels.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Views\CarsVelingrad\" />
+  </ItemGroup>
+
 </Project>

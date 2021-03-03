@@ -8,7 +8,7 @@
     using System.Linq;
     using System.Text;
 
-    public class VehicleService
+    public class VehicleService : IVehicleService
     {
         private readonly ApplicationDbContext db;
 
@@ -135,7 +135,7 @@
                 vehicleType = new VehicleType() { Name = inputModel.VehicleType };
             }
 
-            Vehicle vehicle = new Vehicle() { Price = inputModel.Price,Run = inputModel.Run, Engine = engine, City = city, Model = model, Color = color, ExtrasPackage = extrasPackage, VehicleType = vehicleType };
+            Vehicle vehicle = new Vehicle() { Price = inputModel.Price, Run = inputModel.Run, Engine = engine, City = city, Model = model, Color = color, ExtrasPackage = extrasPackage, VehicleType = vehicleType };
 
             this.db.Vehicles.Add(vehicle);
             this.db.SaveChanges();

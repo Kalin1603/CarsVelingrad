@@ -1,0 +1,28 @@
+﻿@model CarsVelingrad.ViewModels.VehiclesViewModel;
+
+<h1>Списък с обяви<h1>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Марка<th>
+            <th>Модел<th>
+            <th>Цена<th>
+            <th>Дата<th>
+            <th>Пробег<th>
+            <th>Местоположение<th>       
+        <tr>
+    <thead>
+        <tbody>
+            @foreach (var item in Model.Vehicles)
+            {
+              <tr>
+                  <th>@item.Brand<th>
+                  <th>@item.Model<th>
+                  <th>@item.Price<th>
+                  <th>@item.Data<th>
+                  <th>@item.Run<th>
+                  <th>@item.Location<th>       
+              <tr>
+            }
+        <tbody>
+<table>
