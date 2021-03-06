@@ -4,6 +4,29 @@
 
 <div class="text-center">
     <h1 class="display-4">Добре дошли в "@ViewData["Title"]"</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h2><i class="fas fa-mobile" style="color:mediumvioletred"></i> 08885555555</h2>
+    <hr />
+    <div class="jumbotron">
+        <h2 class="display-4">Най-скъпи автомобили</h2>
+        <hr />
+        <div class="container">
+            <div class="row mx-auto ">
+                @foreach (var item in Model.TopVehicleViewModel.Vehicles)
+                {
+                    <div class="card mx-auto my-1" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">@item.Brand</h5>
+                            <p class="card-text">Цена: @item.Model</p>
+                            <p class="card-text">Етажи: @item.Price</p>
+                            <p class="card-text">Тип: @item.Data</p>
+                            <p class="card-text">Тип: @item.Run</p>
+                            <p class="card-text">Тип: @item.Location</p>
+                            <p class="card-text">Тип: @item.Tags</p>
+                            <img class="img-thumbnail" src="https://media.tacdn.com/media/attractions-splice-spp-674x446/06/6f/79/5a.jpg" />
+                            @*<a href="#" class="btn btn-primary">Go somewhere</a>*@
+                        </div>
+                    </div>}
+            </div>
+        </div>
+   </div>
 </div>
- 

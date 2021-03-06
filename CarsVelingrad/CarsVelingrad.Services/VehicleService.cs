@@ -36,7 +36,7 @@
                 Price = x.Price,
                 Run = x.Run,
                 Brand = x.Model.Brand.Name,
-                Tags = x.Tags.Select(t=>t.Tag.Name).ToList()
+                Tags = x.Tags.Select(t => t.Tag.Name).ToList()
 
             }).Skip(model.ItemsPerPage * model.PageNumber - 1)
             .Take(model.ItemsPerPage)
@@ -281,6 +281,33 @@
             }
 
             db.SaveChanges();
+
+
+        
+
+
         }
-    }
+
+        public TopVehicleViewModel GetTopExpensiveProperties()
+        {
+            TopVehicleViewModel model = new TopVehicleViewModel();
+
+            model.Vehicles = this.db.Vehicles
+                .OrderByDescending(x => x.Price)
+                .Take(6)
+                .Select(x => new VehicleViewModel()
+                {
+                   Model=x.Model.Name,
+                   Price=x.Price,
+                   Run=x.Run,
+                   AdvertDate=x.AdvertDate.ToString(),
+                   City=x.City.Name,
+                   
+                })
+                .ToList();
+
+            return model;
+
+        }
+    }   
 }
