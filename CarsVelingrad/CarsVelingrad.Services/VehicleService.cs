@@ -35,7 +35,8 @@
                 Model = x.Model.Name,
                 Price = x.Price,
                 Run = x.Run,
-                Brand = x.Model.Brand.Name
+                Brand = x.Model.Brand.Name,
+                Tags = x.Tags.Select(t=>t.Tag.Name).ToList()
 
             }).Skip(model.ItemsPerPage * model.PageNumber - 1)
             .Take(model.ItemsPerPage)
@@ -139,6 +140,7 @@
 
             this.db.Vehicles.Add(vehicle);
             this.db.SaveChanges();
+            this.UpdateTags(vehicle.Id);
         }
 
         private void UpdateTags(int vehicleId)

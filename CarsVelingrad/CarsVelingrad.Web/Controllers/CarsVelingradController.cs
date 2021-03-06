@@ -11,9 +11,9 @@ namespace CarsVelingrad.Web.Controllers
        private readonly VehicleService vehicleService = new VehicleService(dbContext);
 
       
-        public IActionResult Index()
+        public IActionResult Index(int page = 1)
         {
-            VehiclesViewModel model = vehicleService.GetVehicles();
+            VehiclesViewModel model = vehicleService.GetVehicles(page);
             return View(model);
         }
 
