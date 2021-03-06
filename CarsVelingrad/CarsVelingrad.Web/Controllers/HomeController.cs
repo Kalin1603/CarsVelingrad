@@ -14,21 +14,17 @@ namespace CarsVelingrad.Web.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly IVehicleService vehicleService;
+       
 
-        public HomeController(ILogger<HomeController> logger,IVehicleService vehicleService)
+        public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
-            this.vehicleService = vehicleService;
+
         }
 
         public IActionResult Index()
         {
-            HomeIndexViewModel model = new HomeIndexViewModel();
-            {
-              //.... TopExpensive = vehicleService.GetTopExpensiveProperties();
-            }
-            return View(model);
+            return View();
         }
 
         public IActionResult Privacy()
