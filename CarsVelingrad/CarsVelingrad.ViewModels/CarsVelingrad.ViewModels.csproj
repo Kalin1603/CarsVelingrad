@@ -8,4 +8,8 @@
     <ProjectReference Include="..\CarsVelingrad.Data\CarsVelingrad.Data.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="NewFolder\" />
+  </ItemGroup>
+
 </Project>
