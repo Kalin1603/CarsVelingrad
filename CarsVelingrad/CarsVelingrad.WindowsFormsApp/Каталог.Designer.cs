@@ -39,6 +39,7 @@ namespace CarsVelingrad.WindowsFormsApp
             this.buttonPrevious = new System.Windows.Forms.Button();
             this.buttonNext = new System.Windows.Forms.Button();
             this.labelPageInfo = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -118,11 +119,22 @@ namespace CarsVelingrad.WindowsFormsApp
             this.labelPageInfo.TabIndex = 3;
             this.labelPageInfo.Text = "TO DO - page number...";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(946, 436);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(169, 61);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Изтриване";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Каталог
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1117, 608);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.labelPageInfo);
             this.Controls.Add(this.buttonNext);
             this.Controls.Add(this.buttonPrevious);
@@ -149,5 +161,6 @@ namespace CarsVelingrad.WindowsFormsApp
         private System.Windows.Forms.Button buttonPrevious;
         private System.Windows.Forms.Button buttonNext;
         private System.Windows.Forms.Label labelPageInfo;
+        private System.Windows.Forms.Button button1;
     }
 }

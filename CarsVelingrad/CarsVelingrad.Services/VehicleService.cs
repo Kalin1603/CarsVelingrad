@@ -17,6 +17,17 @@
             this.db = db;
         }
 
+        public void DeleteVehicle(int id)
+        {
+            Vehicle vehicle = this.db.Vehicles.FirstOrDefault(x => x.Id == id);
+            if (vehicle==null)
+            {
+                return;
+            }
+            this.db.Vehicles.Remove(vehicle);
+            this.db.SaveChanges();
+        }
+
         public VehiclesViewModel GetVehicles(int pageNumber = 1)
         {
             VehiclesViewModel model = new VehiclesViewModel();
