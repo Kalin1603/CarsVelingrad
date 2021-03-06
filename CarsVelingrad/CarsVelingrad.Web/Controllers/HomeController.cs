@@ -1,4 +1,6 @@
-﻿using CarsVelingrad.Web.Models;
+﻿using CarsVelingrad.Services;
+using CarsVelingrad.ViewModels;
+using CarsVelingrad.Web.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -12,10 +14,12 @@ namespace CarsVelingrad.Web.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+       
 
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
+
         }
 
         public IActionResult Index()

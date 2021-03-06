@@ -36,7 +36,7 @@
                 Price = x.Price,
                 Run = x.Run,
                 Brand = x.Model.Brand.Name,
-                Tags = x.Tags.Select(t=>t.Tag.Name).ToList()
+                Tags = x.Tags.Select(t => t.Tag.Name).ToList()
 
             }).Skip(model.ItemsPerPage * model.PageNumber - 1)
             .Take(model.ItemsPerPage)
@@ -281,6 +281,10 @@
             }
 
             db.SaveChanges();
+
+
+
         }
-    }
-}
+
+    } 
+}   
