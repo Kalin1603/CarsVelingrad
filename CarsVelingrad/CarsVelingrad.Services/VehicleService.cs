@@ -159,7 +159,7 @@
                 vehicle.Tags.Add(
                     new TagCars
                     {
-                        Tag = this.GetOrCreateTag("HighClassVehicle")
+                        Tag = this.GetOrCreateTag("ВисокКласАвтомобил")
                     });
             }
 
@@ -168,7 +168,7 @@
                 vehicle.Tags.Add(
                     new TagCars
                     {
-                        Tag = this.GetOrCreateTag("MiddleClassVehicle")
+                        Tag = this.GetOrCreateTag("СреденКласАвтомобил")
                     });
             }
 
@@ -177,7 +177,7 @@
                 vehicle.Tags.Add(
                     new TagCars
                     {
-                        Tag = this.GetOrCreateTag("LowClassVehicle")
+                        Tag = this.GetOrCreateTag("НисъкКласАвтомобил")
                     });
             }
 
@@ -186,7 +186,7 @@
                 vehicle.Tags.Add(
                     new TagCars
                     {
-                        Tag = this.GetOrCreateTag("ExtremelyFast")
+                        Tag = this.GetOrCreateTag("МногоБързАвтомобил")
                     });
             }
 
@@ -195,7 +195,7 @@
                 vehicle.Tags.Add(
                     new TagCars
                     {
-                        Tag = this.GetOrCreateTag("Fast")
+                        Tag = this.GetOrCreateTag("БързАвтомобил")
                     });
             }
 
@@ -204,7 +204,7 @@
                 vehicle.Tags.Add(
                     new TagCars
                     {
-                        Tag = this.GetOrCreateTag("MediumFast")
+                        Tag = this.GetOrCreateTag("СредноБързАвтомобил")
                     });
             }
 
@@ -213,7 +213,7 @@
                 vehicle.Tags.Add(
                     new TagCars
                     {
-                        Tag = this.GetOrCreateTag("Slow")
+                        Tag = this.GetOrCreateTag("БавенАвтомобил")
                     });
             }
 
@@ -222,7 +222,7 @@
                 vehicle.Tags.Add(
                     new TagCars
                     {
-                        Tag = this.GetOrCreateTag("ExtremelyLoud")
+                        Tag = this.GetOrCreateTag("МногоГолямДвигател")
                     });
             }
 
@@ -231,7 +231,7 @@
                 vehicle.Tags.Add(
                     new TagCars
                     {
-                        Tag = this.GetOrCreateTag("Loud")
+                        Tag = this.GetOrCreateTag("ГолямДвигател")
                     });
             }
 
@@ -240,7 +240,7 @@
                 vehicle.Tags.Add(
                     new TagCars
                     {
-                        Tag = this.GetOrCreateTag("MediumLoud")
+                        Tag = this.GetOrCreateTag("СредноГолямДвигател")
                     });
             }
 
@@ -249,7 +249,7 @@
                 vehicle.Tags.Add(
                     new TagCars
                     {
-                        Tag = this.GetOrCreateTag("Quiet")
+                        Tag = this.GetOrCreateTag("МалъкДвигател")
                     });
             }
 
@@ -258,7 +258,7 @@
                 vehicle.Tags.Add(
                     new TagCars
                     {
-                        Tag = this.GetOrCreateTag("HugeRun")
+                        Tag = this.GetOrCreateTag("ГолямПробег")
                     });
             }
 
@@ -267,7 +267,7 @@
                 vehicle.Tags.Add(
                     new TagCars
                     {
-                        Tag = this.GetOrCreateTag("MediumRun")
+                        Tag = this.GetOrCreateTag("СреденПробег")
                     });
             }
 
@@ -276,7 +276,7 @@
                 vehicle.Tags.Add(
                     new TagCars
                     {
-                        Tag = this.GetOrCreateTag("SmallRun")
+                        Tag = this.GetOrCreateTag("МалъкПробег")
                     });
             }
 
@@ -286,5 +286,77 @@
 
         }
 
-    } 
+        public TopVehicleViewModel GetTopExpensiveVehicles()
+        {
+            TopVehicleViewModel model = new TopVehicleViewModel();
+
+            model.vehicleViewModels = this.db.Vehicles
+                .OrderByDescending(x => x.Price)
+                .Take(6)
+                .Select(x => new VehicleViewModel()
+                {                    
+                    AdvertDate = x.AdvertDate.ToString("MMMM dd, yyyy"),
+                    City = x.City.Name,
+                    Color = x.Color.Name,
+                    Engine = x.EngineId,
+                    Model = x.Model.Name,
+                    Price = x.Price,
+                    Run = x.Run,
+                    Brand = x.Model.Brand.Name,
+                })
+                .ToList();
+
+            return model;
+        }
+
+        public TopVehicleViewModel GetTopCheapestVehicles()
+        {
+            TopVehicleViewModel model = new TopVehicleViewModel();
+
+            model.vehicleViewModels = this.db.Vehicles
+                .Where(x => x.Price > 0)
+                .OrderBy(x => x.Price)
+                .Select(x => new VehicleViewModel()
+                {
+                    AdvertDate = x.AdvertDate.ToString("MMMM dd, yyyy"),
+                    City = x.City.Name,
+                    Color = x.Color.Name,
+                    Engine = x.EngineId,
+                    Model = x.Model.Name,
+                    Price = x.Price,
+                    Run = x.Run,
+                    Brand = x.Model.Brand.Name,
+                })
+                .ToList();
+
+            return model;
+        }
+
+        public TopVehicleViewModel GetLastAddedVehicles()
+        {
+            TopVehicleViewModel model = new TopVehicleViewModel();
+
+            model.vehicleViewModels = this.db.Vehicles
+                .OrderByDescending(x => x.AdvertDate)
+                .Take(6)
+                .Select(x => new VehicleViewModel()
+                {
+                    AdvertDate = x.AdvertDate.ToString("MMMM dd, yyyy"),
+                    City = x.City.Name,
+                    Color = x.Color.Name,
+                    Engine = x.EngineId,
+                    Model = x.Model.Name,
+                    Price = x.Price,
+                    Run = x.Run,
+                    Brand = x.Model.Brand.Name,
+                })
+                .ToList();
+
+            return model;
+
+        }
+    }
+
+        
+    
 }   

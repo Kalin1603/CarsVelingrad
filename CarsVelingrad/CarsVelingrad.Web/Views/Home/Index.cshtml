@@ -1,7 +1,78 @@
-﻿@{
+﻿@model CarsVelingrad.ViewModels.HomeIndexViewModel;
+@{
+
     ViewData["Title"] = "CarsVelingrad.bg";
 }
 
 <div class="text-center">
     <h1 class="display-4">Добре дошли в "@ViewData["Title"]"</h1>
-</div>
+
+    <h2><i class="fas fa-mobile" style="color:mediumvioletred"></i> 08885555555</h2>
+    <hr />
+    <div class="jumbotron">
+        <h2 class="display-4">Най-скъпи </h2>
+        <hr />
+        <div class="container">
+            <div class="row mx-auto ">
+                @foreach (var item in Model.TopExpensive.vehicleViewModels)
+                {
+                    <div class="card mx-auto my-1" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Марка: @item.Brand</h5>
+                            <p class="card-text">Модел: @item.Model</p>
+                            <p class="card-text">Цена: @item.Price</p>
+                            <p class="card-text">Цвят: @item.Color</p>
+                            <p class="card-text">Двигател: @item.Engine</p>
+                            <p class="card-text">Пробег: @item.Run</p>
+                            <p class="card-text">Локация: @item.City</p>
+                            <img class="img-thumbnail" src="https://cdn-image.departures.com/sites/default/files/styles/responsive_vertical_964x543/public/1590608960/header-bentley-mulsanne-extended-wheelbase-EXPENSIVECARS0520.jpg?itok=SJNa7doB&timestamp=1590609317" />
+                            @*<a href="#" class="btn btn-primary">Go somewhere</a>*@
+                        </div>
+                    </div>}
+            </div>
+        </div>
+        <hr />
+        <h2 class="display-4">Най-евтини </h2>
+        <hr />
+        <div class="container">
+            <div class="row mx-auto ">
+                @foreach (var item in Model.TopExpensive.vehicleViewModels)
+                {
+                    <div class="card mx-auto my-1" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Марка: @item.Brand</h5>
+                            <p class="card-text">Модел: @item.Model</p>
+                            <p class="card-text">Цена: @item.Price</p>
+                            <p class="card-text">Цвят: @item.Color</p>
+                            <p class="card-text">Двигател: @item.Engine</p>
+                            <p class="card-text">Пробег: @item.Run</p>
+                            <p class="card-text">Локация: @item.City</p>
+                            <img class="img-thumbnail" src="https://miro.medium.com/max/1620/1*o9SPb2hIfiUjkWjVaxcGtQ.jpeg" />
+                            @*<a href="#" class="btn btn-primary">Go somewhere</a>*@
+                        </div>
+                    </div>}
+            </div>
+        </div>
+        <hr /><h2 class="display-4">Последно добавени </h2>
+        <hr />
+        <div class="container">
+            <div class="row mx-auto ">
+                @foreach (var item in Model.TopExpensive.vehicleViewModels)
+                {
+                    <div class="card mx-auto my-1" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Марка: @item.Brand</h5>
+                            <p class="card-text">Модел: @item.Model</p>
+                            <p class="card-text">Цена: @item.Price</p>
+                            <p class="card-text">Цвят: @item.Color</p>
+                            <p class="card-text">Двигател: @item.Engine</p>
+                            <p class="card-text">Пробег: @item.Run</p>
+                            <p class="card-text">Локация: @item.City</p>
+                            <img class="img-thumbnail" src="https://www.tuningblog.eu/wp-content/uploads/2020/08/Getriebetausch-SMG-II-Handschaltung-BMW-E46-M3-CSL-Tuning-3.jpg" />
+                            @*<a href="#" class="btn btn-primary">Go somewhere</a>*@
+                        </div>
+                    </div>}
+            </div>
+        </div>
+        
+
