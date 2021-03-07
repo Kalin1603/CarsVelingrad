@@ -7,8 +7,6 @@ namespace CarsVelingrad.Web.Controllers
 {
     public class CarsVelingradController : Controller
     {
-       private static ApplicationDbContext dbContext = new ApplicationDbContext();
-       private readonly VehicleService vehicleService = new VehicleService(dbContext);
         private IVehicleService vehiclesService;
 
         public CarsVelingradController(IVehicleService vehiclesService)
@@ -18,7 +16,7 @@ namespace CarsVelingrad.Web.Controllers
 
         public IActionResult Index(int page = 1)
         {
-            VehiclesViewModel model = vehicleService.GetVehicles(page);
+            VehiclesViewModel model = vehiclesService.GetVehicles(page);
             return View(model);
         }
 

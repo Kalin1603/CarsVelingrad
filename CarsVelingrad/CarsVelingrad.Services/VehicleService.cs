@@ -17,15 +17,18 @@
             this.db = db;
         }
 
-        public void DeleteVehicle(int id)
+        public bool DeleteVehicle(int id)
         {
             Vehicle vehicle = this.db.Vehicles.FirstOrDefault(x => x.Id == id);
             if (vehicle==null)
             {
-                return;
+                return false;
             }
+            ExtrasPackage extras = this.db.Extras.FirstOrDefault(x=>x.VehicleId==id);
+            this.db.Extras.Remove(extras);
             this.db.Vehicles.Remove(vehicle);
             this.db.SaveChanges();
+            return true;
         }
 
         public VehiclesViewModel GetVehicles(int pageNumber = 1)
@@ -37,11 +40,12 @@
 
             model.Vehicles = db.Vehicles.Select(x => new VehicleViewModel()
             {
+                Id = x.Id,
                 VehicleTypeId = x.VehicleTypeId,
                 AdvertDate = x.AdvertDate.ToString("MMMM dd, yyyy"),
                 City = x.City.Name,
                 Color = x.Color.Name,
-                Engine = x.EngineId,
+                Engine = x.Engine.EngineType.Name,
                 ExtrasPackageId = x.ExtrasPackageId,
                 Model = x.Model.Name,
                 Price = x.Price,
@@ -49,7 +53,7 @@
                 Brand = x.Model.Brand.Name,
                 Tags = x.Tags.Select(t => t.Tag.Name).ToList()
 
-            }).Skip(model.ItemsPerPage * model.PageNumber - 1)
+            }).Skip(model.ItemsPerPage * (model.PageNumber - 1))
             .Take(model.ItemsPerPage)
             .ToList();
 
@@ -309,7 +313,7 @@
                     AdvertDate = x.AdvertDate.ToString("MMMM dd, yyyy"),
                     City = x.City.Name,
                     Color = x.Color.Name,
-                    Engine = x.EngineId,
+                    Engine = x.Engine.EngineType.Name,
                     Model = x.Model.Name,
                     Price = x.Price,
                     Run = x.Run,
@@ -327,12 +331,13 @@
             model.vehicleViewModels = this.db.Vehicles
                 .Where(x => x.Price > 0)
                 .OrderBy(x => x.Price)
+                .Take(6)
                 .Select(x => new VehicleViewModel()
                 {
                     AdvertDate = x.AdvertDate.ToString("MMMM dd, yyyy"),
                     City = x.City.Name,
                     Color = x.Color.Name,
-                    Engine = x.EngineId,
+                    Engine = x.Engine.EngineType.Name,
                     Model = x.Model.Name,
                     Price = x.Price,
                     Run = x.Run,
@@ -355,7 +360,7 @@
                     AdvertDate = x.AdvertDate.ToString("MMMM dd, yyyy"),
                     City = x.City.Name,
                     Color = x.Color.Name,
-                    Engine = x.EngineId,
+                    Engine = x.Engine.EngineType.Name,
                     Model = x.Model.Name,
                     Price = x.Price,
                     Run = x.Run,

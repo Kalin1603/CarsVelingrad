@@ -5,6 +5,7 @@ namespace CarsVelingrad.Services
     public interface IVehicleService
     {
         void Create(VehicleInputViewModel inputModel);
+
         VehiclesViewModel GetVehicles(int pageNumber = 1);
 
         TopVehicleViewModel GetTopExpensiveVehicles();
@@ -12,5 +13,7 @@ namespace CarsVelingrad.Services
         TopVehicleViewModel GetTopCheapestVehicles();
 
         TopVehicleViewModel GetLastAddedVehicles();
+
+        bool DeleteVehicle(int id);
     }
 }

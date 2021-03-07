@@ -21,7 +21,7 @@ namespace CarsVelingrad.Web.Controllers
         public HomeController(ILogger<HomeController> logger, IVehicleService vehicleService)
         {
             _logger = logger;
-            
+            this.vehicleService = vehicleService;
         }
 
         public IActionResult Index()

@@ -30,6 +30,7 @@ namespace CarsVelingrad.WindowsFormsApp
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Brand = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Model = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,7 +40,7 @@ namespace CarsVelingrad.WindowsFormsApp
             this.buttonPrevious = new System.Windows.Forms.Button();
             this.buttonNext = new System.Windows.Forms.Button();
             this.labelPageInfo = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonRemove = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,6 +48,7 @@ namespace CarsVelingrad.WindowsFormsApp
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
             this.Brand,
             this.Model,
             this.Price,
@@ -56,9 +58,14 @@ namespace CarsVelingrad.WindowsFormsApp
             this.dataGridView1.Location = new System.Drawing.Point(45, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(908, 402);
+            this.dataGridView1.Size = new System.Drawing.Size(990, 402);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "Номер";
+            this.Id.Name = "Id";
             // 
             // Brand
             // 
@@ -119,22 +126,22 @@ namespace CarsVelingrad.WindowsFormsApp
             this.labelPageInfo.TabIndex = 3;
             this.labelPageInfo.Text = "TO DO - page number...";
             // 
-            // button1
+            // buttonRemove
             // 
-            this.button1.Location = new System.Drawing.Point(946, 436);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(169, 61);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Изтриване";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonRemove.Location = new System.Drawing.Point(174, 513);
+            this.buttonRemove.Name = "buttonRemove";
+            this.buttonRemove.Size = new System.Drawing.Size(169, 61);
+            this.buttonRemove.TabIndex = 4;
+            this.buttonRemove.Text = "Изтриване";
+            this.buttonRemove.UseVisualStyleBackColor = true;
+            this.buttonRemove.Click += new System.EventHandler(this.buttonRemove_Click);
             // 
             // Каталог
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1117, 608);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonRemove);
             this.Controls.Add(this.labelPageInfo);
             this.Controls.Add(this.buttonNext);
             this.Controls.Add(this.buttonPrevious);
@@ -152,15 +159,16 @@ namespace CarsVelingrad.WindowsFormsApp
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button buttonPrevious;
+        private System.Windows.Forms.Button buttonNext;
+        private System.Windows.Forms.Label labelPageInfo;
+        private System.Windows.Forms.Button buttonRemove;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Brand;
         private System.Windows.Forms.DataGridViewTextBoxColumn Model;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
         private System.Windows.Forms.DataGridViewTextBoxColumn Run;
         private System.Windows.Forms.DataGridViewTextBoxColumn Location;
-        private System.Windows.Forms.Button buttonPrevious;
-        private System.Windows.Forms.Button buttonNext;
-        private System.Windows.Forms.Label labelPageInfo;
-        private System.Windows.Forms.Button button1;
     }
 }
