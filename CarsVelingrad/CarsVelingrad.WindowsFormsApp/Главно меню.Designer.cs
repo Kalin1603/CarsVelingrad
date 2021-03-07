@@ -36,19 +36,20 @@ namespace CarsVelingrad.WindowsFormsApp
             // 
             // labelTitle
             // 
-            this.labelTitle.AutoSize = true;
-            this.labelTitle.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelTitle.Location = new System.Drawing.Point(321, 28);
+            this.labelTitle.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelTitle.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelTitle.Location = new System.Drawing.Point(277, 52);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(200, 40);
+            this.labelTitle.Size = new System.Drawing.Size(265, 60);
             this.labelTitle.TabIndex = 0;
             this.labelTitle.Text = "Cars Velingrad";
+            this.labelTitle.Click += new System.EventHandler(this.labelTitle_Click);
             // 
             // CreateVehicle
             // 
-            this.CreateVehicle.Location = new System.Drawing.Point(12, 101);
+            this.CreateVehicle.Location = new System.Drawing.Point(94, 215);
             this.CreateVehicle.Name = "CreateVehicle";
-            this.CreateVehicle.Size = new System.Drawing.Size(174, 115);
+            this.CreateVehicle.Size = new System.Drawing.Size(247, 241);
             this.CreateVehicle.TabIndex = 1;
             this.CreateVehicle.Text = "Добави автомобил в автокъщата";
             this.CreateVehicle.UseVisualStyleBackColor = true;
@@ -56,9 +57,9 @@ namespace CarsVelingrad.WindowsFormsApp
             // 
             // buttonCatalog
             // 
-            this.buttonCatalog.Location = new System.Drawing.Point(226, 101);
+            this.buttonCatalog.Location = new System.Drawing.Point(480, 215);
             this.buttonCatalog.Name = "buttonCatalog";
-            this.buttonCatalog.Size = new System.Drawing.Size(168, 115);
+            this.buttonCatalog.Size = new System.Drawing.Size(247, 241);
             this.buttonCatalog.TabIndex = 2;
             this.buttonCatalog.Text = "Каталог за автомобили";
             this.buttonCatalog.UseVisualStyleBackColor = true;
@@ -76,7 +77,6 @@ namespace CarsVelingrad.WindowsFormsApp
             this.Name = "Main";
             this.Text = "Главно меню";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

@@ -7,6 +7,10 @@ namespace CarsVelingrad.Services
         void Create(VehicleInputViewModel inputModel);
         VehiclesViewModel GetVehicles(int pageNumber = 1);
 
-        
+        TopVehicleViewModel GetTopExpensiveVehicles();
+
+        TopVehicleViewModel GetTopCheapestVehicles();
+
+        TopVehicleViewModel GetLastAddedVehicles();
     }
 }

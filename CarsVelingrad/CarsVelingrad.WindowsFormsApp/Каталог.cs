@@ -66,5 +66,16 @@ namespace CarsVelingrad.WindowsFormsApp
                 FillDataGrid();
             }        
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var row = dataGridView1.CurrentRow;
+            VehicleViewModel model = new VehicleViewModel();
+            int id = int.Parse(row.Cells[0].Value.ToString());
+            vehicleServices.DeleteVehicle(id);
+            FillDataGrid();
+
+
+        }
     }
 }
