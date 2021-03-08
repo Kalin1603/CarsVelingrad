@@ -20,11 +20,11 @@
         public bool DeleteVehicle(int id)
         {
             Vehicle vehicle = this.db.Vehicles.FirstOrDefault(x => x.Id == id);
-            if (vehicle==null)
+            if (vehicle == null)
             {
                 return false;
             }
-            ExtrasPackage extras = this.db.Extras.FirstOrDefault(x=>x.VehicleId==id);
+            ExtrasPackage extras = this.db.Extras.FirstOrDefault(x => x.VehicleId == id);
             this.db.Extras.Remove(extras);
             this.db.Vehicles.Remove(vehicle);
             this.db.SaveChanges();
@@ -59,6 +59,7 @@
 
             return model;
         }
+        
 
         private Tag GetOrCreateTag(string tagName)
         {
@@ -309,7 +310,7 @@
                 .OrderByDescending(x => x.Price)
                 .Take(6)
                 .Select(x => new VehicleViewModel()
-                {                    
+                {
                     AdvertDate = x.AdvertDate.ToString("MMMM dd, yyyy"),
                     City = x.City.Name,
                     Color = x.Color.Name,
@@ -371,8 +372,44 @@
             return model;
 
         }
+
+
+
+        public SearchVehiclesViewModel SearchByPrice(int minPrice, int maxPrice, int pageNumber = 1)
+        {
+            SearchVehiclesViewModel model = new SearchVehiclesViewModel();
+
+            model.ElementsCount = db.Vehicles.Count();
+            model.PageNumber = pageNumber;
+            model.MinPrice = minPrice;
+            model.MaxPrice = maxPrice;
+
+
+            model.Vehicles = db.Vehicles
+                .OrderBy(x => x.Price)
+                .Where(x => x.Price >= minPrice && x.Price <= maxPrice)
+                .Select(x => new VehicleViewModel()
+                {
+
+                    Id = x.Id,
+                    VehicleTypeId = x.VehicleTypeId,
+                    AdvertDate = x.AdvertDate.ToString("MMMM dd, yyyy"),
+                    City = x.City.Name,
+                    Color = x.Color.Name,
+                    Engine = x.Engine.EngineType.Name,
+                    ExtrasPackageId = x.ExtrasPackageId,
+                    Model = x.Model.Name,
+                    Price = x.Price,
+                    Run = x.Run,
+                    Brand = x.Model.Brand.Name,
+                    Tags = x.Tags.Select(t => t.Tag.Name).ToList()
+
+                }).Skip(model.ItemsPerPage * (model.PageNumber - 1))
+            .Take(model.ItemsPerPage)
+            .ToList();
+
+            return model;
+        }
     }
 
-        
-    
 }   

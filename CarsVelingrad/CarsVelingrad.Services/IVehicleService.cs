@@ -14,6 +14,8 @@ namespace CarsVelingrad.Services
 
         TopVehicleViewModel GetLastAddedVehicles();
 
+        SearchVehiclesViewModel SearchByPrice(int minPrice, int maxPrice, int pageNumber);
+
         bool DeleteVehicle(int id);
     }
 }

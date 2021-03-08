@@ -20,5 +20,21 @@ namespace CarsVelingrad.Web.Controllers
             return View(model);
         }
 
+        
+        public IActionResult SearchByPrice(int minPrice,int maxPrice,int page=1)
+        {
+            if (minPrice!=0&&maxPrice!=0)
+            {
+                SearchVehiclesViewModel model = vehiclesService.SearchByPrice(minPrice, maxPrice, page);
+                return View(model);
+
+            }
+            else
+            {
+                return View();
+            }
+
+
+        }
     }
 }
