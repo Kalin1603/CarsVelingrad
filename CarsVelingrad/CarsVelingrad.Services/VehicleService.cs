@@ -325,7 +325,7 @@
             return model;
         }
 
-        public TopVehicleViewModel GetTopCheapestVehicles()
+        public TopVehicleViewModel SearchByPrice()
         {
             TopVehicleViewModel model = new TopVehicleViewModel();
 

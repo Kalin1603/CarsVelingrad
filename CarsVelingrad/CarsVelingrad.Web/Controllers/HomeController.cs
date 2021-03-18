@@ -28,7 +28,7 @@ namespace CarsVelingrad.Web.Controllers
         {
             HomeIndexViewModel model = new HomeIndexViewModel()
             {
-                TopCheapest = vehicleService.GetTopCheapestVehicles(),
+                TopCheapest = vehicleService.SearchByPrice(),
                 TopExpensive = vehicleService.GetTopExpensiveVehicles(),
                 LastAdded = vehicleService.GetLastAddedVehicles()
             };

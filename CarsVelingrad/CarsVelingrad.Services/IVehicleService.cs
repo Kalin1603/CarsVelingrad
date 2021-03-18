@@ -10,7 +10,7 @@ namespace CarsVelingrad.Services
 
         TopVehicleViewModel GetTopExpensiveVehicles();
 
-        TopVehicleViewModel GetTopCheapestVehicles();
+        TopVehicleViewModel SearchByPrice();
 
         TopVehicleViewModel GetLastAddedVehicles();
 
