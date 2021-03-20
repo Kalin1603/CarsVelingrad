@@ -37,6 +37,7 @@
 
             model.ElementsCount = db.Vehicles.Count();
             model.PageNumber = pageNumber;
+            
 
             model.Vehicles = db.Vehicles.Select(x => new VehicleViewModel()
             {
@@ -307,6 +308,7 @@
             TopVehicleViewModel model = new TopVehicleViewModel();
 
             model.vehicleViewModels = this.db.Vehicles
+              
                 .OrderByDescending(x => x.Price)
                 .Take(6)
                 .Select(x => new VehicleViewModel()
